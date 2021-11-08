@@ -1,0 +1,20 @@
+.messages{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+
+}
+.user{
+    font-size: 20px;
+    line-height: 80px;
+    border-right: 4px solid #7294a1;
+    height: auto;
+    padding: 10px;
+
+}
+.dialogs{
+    padding: 10px;
+
+}
+.active{
+    color: chartreuse;
+}

@@ -1,0 +1,19 @@
+.header {
+    background-color: #110303;
+    grid-area: header;
+    padding: 10px;
+    border: 4px solid #2ea2cc;
+}
+
+.imagesH {
+    width: 100px;
+}
+
+.textH {
+    color: cadetblue;
+    position: absolute;
+    top: 30px;
+    right: 560px;
+ font-size: 30px;
+
+}
