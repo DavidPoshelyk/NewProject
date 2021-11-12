@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import "./components/Header/Header";
 import {Header} from "./components/Header/Header";
@@ -9,21 +8,25 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import {Messages} from "./components/Messages/Messages";
 import {Settings} from "./components/Settings/Settings";
 import {Friends} from "./components/Friends/Friends";
+import {TypeDataItem, TypeDialogsItemData, TypeMessagesData} from "./index";
 
+export type PropsType = {
+    dialogs: TypeDialogsItemData[]
+    messages: TypeMessagesData[]
+    posts:any
+}
 
-
-
-function App() {
+function App(props: PropsType) {
     return (
         <BrowserRouter>
             <div className="grid">
                 <Header/>
                 <Nav/>
                 <div className='contents'>
-                    <Route path='/contents' component={Contents}/>
-                    <Route path='/messages' component={Messages}/>
-                    <Route path='/friends' component={Friends}/>
-                    <Route path='/settings' component={Settings}/>
+                    <Route path='/contents' render={() => <Contents posts={props.posts}/>}/>
+                    <Route path='/messages' render={() => <Messages  dialogs={props.dialogs} messages={props.messages}/>}/>
+                    <Route path='/friends' render={() => <Friends/>}/>
+                    <Route path='/settings' render={() => <Settings/>}/>
                 </div>
             </div>
         </BrowserRouter>

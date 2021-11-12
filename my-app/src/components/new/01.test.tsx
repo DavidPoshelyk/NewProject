@@ -4,7 +4,8 @@ test('Sum ', () => {
     let result = Push()
 
     const NewProject = {
-        dom: [{strit: 'rovenskay', nom: 8},
+        dom: [{strit: 'ro' +
+                'fjnjfh hfjkj jdhj ', nom: 8},
             {strit: 'kovelskaya', nom: 10},
             {strit: 'pestraka', nom: 15}],
         cars: [ {marka: "Audi", model: 100}, {marka: "zil", model: 131}, {marka: "Yral", model: 4310}],

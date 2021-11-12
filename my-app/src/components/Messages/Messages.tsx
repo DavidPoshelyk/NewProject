@@ -1,10 +1,20 @@
 import React from "react";
 import s from './Messeges.module.css'
-import {DialogsItemDataMap} from "./DialogsItem";
-import {MessagesMap} from "./MessagesItem";
+import {DialogIteme, TypeDialogsItemData} from "./DialogsItem";
+import {MessagesItem} from "./MessagesItem";
+import {TypeMessagesData} from "../../index";
+
+export type PropsType = {
+    dialogs: TypeDialogsItemData[];
+    messages: TypeMessagesData[]
+}
 
 
-export function Messages() {
+
+export function Messages(props: PropsType) {
+    let DialogsItemDataMap = props.dialogs.map(d => <DialogIteme name={d.name} id={d.id}/> )
+    let MessagesMap = props.messages.map( (m:any)=> <MessagesItem messages={m.messages}/>)
+
     return (
         <div className={s.messages}>
             <div>
