@@ -1,47 +1,53 @@
 import React from "react";
 import s from './Contents.module.css'
 import images from '../../images/santa-katarina-braziliya (1920x1080).jpg'
+import {MyInfo} from "./MyInfo.";
 
 export function Contents() {
     return (<div>
-            <img className={s.imagesFon}
-                 src={images}/>
-            <div className={s.posts}>
-
-                    <img src='https://i.pinimg.com/originals/0f/6f/8d/0f6f8d6b12e35404713b9fed2211272e.jpg'/>
-                    <div className={s.text}>
-                        <li> my info</li>
-                        <li> my age</li>
-                        <li> the weight</li>
-                        <li> position</li>
-                    </div>
-                </div>
+            <MyInfo/>
             <div>
-                <div>My Posts</div>
-                <input type='text'/>
-                <button> push </button>
-                <Posts value={9} date={'14.02.2289'}/>
-                <Posts value={3} date={'14.02.2289'} />
-                <Posts value={77} date={'14.02.2289'}/>
-                <Posts value={89} date={'14.02.2289'}/>
-    </div>
-</div>
+
+                <div className={s.input}>
+                    <h1> New Post</h1>
+                    <input type='text'/>
+                    <button> push</button>
+                </div>
+                {DataPostsMap}
+            </div>
+        </div>
+
     )
 }
 
 
-function Posts(props: any) {
+type TypeDataItem = {
+    item: boolean,
+    like: number,
+    info: string
+}
+let DataPosts = [
+    {item: false, like: 8, info: 'vgvgvktuv'},
+    {item: true, like: 1, info: 'kbibib'},
+    {item: false, like: 10, info: 'jhvbyvyiv'},
+    {item: true, like: 88, info: 'it kamasutra'},
+    {item: false, like: 908, info: 'React Dom'},
+    {item: true, like: 4, info: 'Html hvuyvivfi'},
+]
+
+
+
+const Posts: React.FC<TypeDataItem> = (props) => {
     return (<div className={s.posts}>
             <img src='https://i.pinimg.com/originals/0f/6f/8d/0f6f8d6b12e35404713b9fed2211272e.jpg'/>
-            <div> React Dom
-                <li> Rect dom</li>
-                <li> Rect dom</li>
-                <li> Rect dom</li>
+            <div> My New Posts 
+                <li> {props.info}</li>
             </div>
-
-            <div className={s.textPosts}><b>Like</b> {props.value} <div>{props.date} </div></div>
-
-
+            <div className={s.textPosts}><b>Like</b> {props.like}
+                <div><input type="checkbox" checked={props.item}/></div>
+            </div>
         </div>
     )
 }
+
+let DataPostsMap = DataPosts.map(i => <Posts like={i.like} item={i.item} info={i.info}/> )

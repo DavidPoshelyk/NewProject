@@ -11,6 +11,8 @@ import {Settings} from "./components/Settings/Settings";
 import {Friends} from "./components/Friends/Friends";
 
 
+
+
 function App() {
     return (
         <BrowserRouter>

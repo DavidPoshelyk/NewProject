@@ -1,6 +1,6 @@
 
 .grid {
-    height: 2000px;
+    height: auto;
     display: grid;
     margin: 0;
     width: auto;
