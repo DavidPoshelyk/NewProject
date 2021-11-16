@@ -1,11 +1,26 @@
 .friends{
     display: grid;
-    grid-template-columns: 190px 1fr;
-    padding: 10px;
-}
-.images img{
-    width: 100px;
-}
-.name{
+    margin: 10px;
+    grid-gap: 10px 10px;
+    /*grid-template-columns: 1fr 1fr 1fr 1fr    ;*/
 
+
+}
+.friends img{
+    width: 200px;
+}
+.friendsO {
+    display: grid;
+    justify-items: center;
+
+    background-color: #418aa8;
+    border-radius: 20px;
+
+
+}
+.friendsO img{
+    margin: 10px;
+}
+.friendsO a{
+    text-decoration: none;
 }

@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5ac17eb-3795-4fcd-af5e-410df4e4552e" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Messages/Doalogs/MessagesData.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Messages/Doalogs/MessagesData.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/State/state.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Contents/Contents.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Contents/Contents.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Contents/Contents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Contents/Contents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Contents/Posts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Contents/Posts.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Friends/Friends.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Friends/Friends.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Friends/Friends.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Friends/Friends.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Messages/DialogsItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Messages/DialogsData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Messages/Messages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Messages/Messages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Messages/MessagesItem.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Messages/Messeges.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Messages/Messeges.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Messages/Doalogs/MessagesData.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Messages/Doalogs/MessagesData.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/State/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/State/state.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/new/01.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/new/01.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/new/01.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +137,12 @@
       <workItem from="1636976910211" duration="5105000" />
       <workItem from="1637059397029" duration="3044000" />
       <workItem from="1637062502581" duration="15101000" />
+      <workItem from="1637143105867" duration="5177000" />
+      <workItem from="1637155648429" duration="3898000" />
+      <workItem from="1637240292107" duration="18000" />
+      <workItem from="1637252881341" duration="1395000" />
+      <workItem from="1637328881690" duration="6366000" />
+      <workItem from="1637337693694" duration="2845000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1635541021388</created>

@@ -1,18 +1,12 @@
-import {NewProject, Push,NewProjectType} from "./01";
+import React from 'react';
 
-test('Sum ', () => {
-    let result = Push()
+test.skip("ugvuyviy8",() => {
 
-    const NewProject = {
-        dom: [{strit: 'ro' +
-                'fjnjfh hfjkj jdhj ', nom: 8},
-            {strit: 'kovelskaya', nom: 10},
-            {strit: 'pestraka', nom: 15}],
-        cars: [ {marka: "Audi", model: 100}, {marka: "zil", model: 131}, {marka: "Yral", model: 4310}],
-        shop: { shop8h: ["almi", "santa", "evroopt"], shop24h: ["sosedi", 'blabla']}
-    }
+    const Object = [1, 22, 34, 56, 34, 45, 45
+        ]
 
-    expect(result).toBe( 5)
 
-    }
-)
+   const Newobject =  Object.filter(Object =>  Object == 45 || Object == 34 )
+
+    expect(Newobject.length).toBe(4)
+})

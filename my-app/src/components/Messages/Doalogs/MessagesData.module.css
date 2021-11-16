@@ -1,5 +1,5 @@
 .dialogs {
-    margin: 0px;
+    margin-top: 10px;
     border-left: 4px solid #7294a1;
     display: grid;
     grid-template-rows: 100px 100px;
@@ -29,7 +29,10 @@
     background-color: #29444f;
     border-radius: 20px;
 }
-.youI img{height: 60px;
+.youI img{
+
+
+    height: 60px;
     border-radius: 50px;
     width: 60px;
 

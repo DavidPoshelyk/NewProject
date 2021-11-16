@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import s from './Contents.module.css'
 import {MyInfo} from "./MyInfo.";
 import {Posts} from "./Posts";
@@ -9,23 +9,32 @@ type Contents = {
 }
 
 
-export function Contents(props:Contents) {
-    let DataPostsMap = props.posts.map(i => <Posts like={i.like} item={i.item} info={i.info}/> )
+export function Contents(props: Contents) {
+    let DataPostsMap = props.posts.map(i => <Posts like={i.like} item={i.item} info={i.info}/>);
 
-    return (<div>
-            <MyInfo/>
-            <div>
+    let newPost = useRef<HTMLTextAreaElement>(null);
 
-                <div className={s.input}>
-                    <h1> New Post</h1>
-                    <input type='text'/>
-                    <button> push</button>
-                </div>
-                {DataPostsMap}
+    let Push = () => {
+
+
+        let  text = newPost.current?.value;
+
+       return  alert(text)
+    }
+
+
+
+    return <div>
+        <MyInfo/>
+
+            <div className={s.input}>
+                <h1> New Post</h1>
+                <textarea ref={newPost}> </textarea>
+                <button onClick={Push}> push</button>
             </div>
-        </div>
+            {DataPostsMap}
 
-    )
+    </div>
 }
 
 
