@@ -8,15 +8,18 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import {Messages} from "./components/Messages/Messages";
 import {Settings} from "./components/Settings/Settings";
 import {Friends} from "./components/Friends/Friends";
-import {TypeDataItem, TypeDialogsItemData, TypeMessagesData} from "./index";
+import {TypeDialogs, TypeFriends, TypeMessages, TypePosts} from "./components/State/state";
+import * as path from "path";
 
-export type PropsType = {
-    dialogs: TypeDialogsItemData[]
-    messages: TypeMessagesData[]
-    posts:any
+type App = {
+    posts: Array<TypePosts> ,
+    dialogs: Array<TypeDialogs>,
+    messages: Array<TypeMessages>,
+    friend: Array<TypeFriends>
 }
 
-function App(props: PropsType) {
+
+function App(props: App) {
     return (
         <BrowserRouter>
             <div className="grid">
@@ -24,8 +27,9 @@ function App(props: PropsType) {
                 <Nav/>
                 <div className='contents'>
                     <Route path='/contents' render={() => <Contents posts={props.posts}/>}/>
-                    <Route path='/messages' render={() => <Messages  dialogs={props.dialogs} messages={props.messages}/>}/>
-                    <Route path='/friends' render={() => <Friends/>}/>
+                    <Route path='/messages'
+                           render={() => <Messages dialogs={props.dialogs} messages={props.messages}/>}/>
+                    <Route path='/friends' render={() => <Friends friend={props.friend} />}/>
                     <Route path='/settings' render={() => <Settings/>}/>
                 </div>
             </div>

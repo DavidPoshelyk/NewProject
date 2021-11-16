@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5ac17eb-3795-4fcd-af5e-410df4e4552e" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Contents/Posts.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Messages/DialogsItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Messages/MessagesItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/Messages/Doalogs/MessagesData.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/Messages/Doalogs/MessagesData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/State/state.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Contents/Contents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Contents/Contents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Contents/Posts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Contents/Posts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Friends/Friends.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Friends/Friends.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Friends/Friends.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Friends/Friends.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Messages/DialogsItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Messages/DialogsData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Messages/Messages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Messages/Messages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/new/01.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/new/01.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Messages/MessagesItem.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Messages/Messeges.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Messages/Messeges.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,9 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -58,11 +65,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\NewProject\my-app\src\components\Messages\Doalogs" />
       <recent name="D:\NewProgect\my-app\src\images" />
       <recent name="D:\NewProgect\my-app\src\components\Friends" />
       <recent name="D:\NewProgect\my-app\src\components\Messages" />
       <recent name="D:\NewProgect\my-app\src\components\Contents" />
-      <recent name="D:\NewProgect\my-app\src\components\Contents\Messages" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -128,6 +135,14 @@
       <workItem from="1636645313907" duration="5462000" />
       <workItem from="1636732256076" duration="238000" />
       <workItem from="1636733054650" duration="12477000" />
+      <workItem from="1636790164196" duration="2073000" />
+      <workItem from="1636795222221" duration="521000" />
+      <workItem from="1636795884344" duration="10000" />
+      <workItem from="1636797638371" duration="24000" />
+      <workItem from="1636797675166" duration="16000" />
+      <workItem from="1636976910211" duration="5105000" />
+      <workItem from="1637059397029" duration="3044000" />
+      <workItem from="1637062502581" duration="15101000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1635541021388</created>
