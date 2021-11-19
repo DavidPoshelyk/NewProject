@@ -1,6 +1,8 @@
 import React from 'react';
+import {renderDom} from "../../renderDom";
 
- type StateType = {
+
+ export type StateType = {
      DataPosts:Array<TypePosts>
      MessagesData:Array<TypeMessages>
      DialogsData: Array<TypeDialogs>
@@ -32,24 +34,8 @@ export type TypePosts = {
 }
 export  type userImages = Array<string>
 
-export  const state: StateType = {
+  export const state: StateType = {
     DataPosts: [
-        {item: false, like: 8, info: 'vgvgvktuv'},
-        {item: true, like: 1, info: 'kbibib'},
-        {item: false, like: 10, info: 'jhvbyvyiv'},
-        {item: true, like: 88, info: 'it kamasutra'},
-        {item: false, like: 908, info: 'React Dom'},
-        {item: true, like: 4, info: 'Html hvuyvivfi'},
-        {item: true, like: 4, info: 'Html hvuyvivfi'},
-        {item: true, like: 4, info: 'Html hvuyvivfi'},
-        {item: true, like: 4, info: 'Html hvuyvivfi'},
-        {item: true, like: 4, info: 'Html hvuyvivfi'},
-        {item: true, like: 4, info: 'Html hvuyvivfi'},
-        {item: true, like: 4, info: 'Html hvuyvivfi'},
-        {item: true, like: 4, info: 'Html hvuyvivfi'},
-        {item: true, like: 4, info: 'Html hvuyvivfi'},
-        {item: true, like: 4, info: 'Html hvuyvivfi'},
-        {item: true, like: 4, info: 'Html hvuyvivfi'},
         {item: true, like: 4, info: 'Html hvuyvivfi'},
     ],
     MessagesData: [
@@ -85,4 +71,17 @@ export  const state: StateType = {
         {id:6, images:'https://cdn1.byjus.com/wp-content/uploads/2019/09/my-best-friend-essay-for-class-1.png', name: 'Andrey', status: true},
         {id:6, images:'https://cdn1.byjus.com/wp-content/uploads/2019/09/my-best-friend-essay-for-class-1.png', name: 'Andrey', status: true},
     ]
-}
+ }
+
+ export const  addPosts = (postMessages:string) => {
+     let New:TypePosts = {
+         item: true,
+         like: 0,
+         info: postMessages
+     }
+     state.DataPosts.push(New);
+     renderDom(state)
+
+
+ }
+
