@@ -4,9 +4,12 @@ import {MyInfo} from "./MyInfo.";
 import {Posts} from "./Posts";
 import {TypePosts} from "../State/state";
 
+
 type Contents = {
     posts: Array<TypePosts>
-    addpost:Function
+    addpost:() => void
+    newtextpost:any
+    newChange: any
 }
 
 
@@ -16,17 +19,20 @@ export function Contents(props: Contents) {
     let newPost = useRef<HTMLTextAreaElement>(null);
 
     let Push = () => {
-        let text = newPost.current?.value;
-        props.addpost(text);
-
+        props.addpost();
+        props.newChange('')
     }
+ let onChangePost = () => {
+     let text = newPost.current?.value;
+        props.newChange(text)
 
+ }
 
     return <div>
         <MyInfo/>
         <div className={s.input}>
             <h1> New Post</h1>
-            <textarea ref={newPost}> </textarea>
+            <textarea onChange={onChangePost} ref={newPost} value={props.newtextpost}/>
             <button onClick={Push}> push</button>
         </div>
         {DataPostsMap}

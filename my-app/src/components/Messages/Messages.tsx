@@ -2,11 +2,14 @@ import React, {useRef} from "react";
 import s from './Messeges.module.css'
 import {MessagesData} from "./Doalogs/MessagesData";
 import {DialogsData} from "./DialogsData";
-import {TypeDialogs, TypeMessages} from "../State/state";
+import {newChangeMessage, TypeDialogs, TypeMessages} from "../State/state";
 
 type  Messages = {
     dialogs: Array<TypeDialogs>
     messages: Array<TypeMessages>
+    ChangeMessages: any
+    addMessage:() => void
+    newChangeMessage:Function
 }
 
 export function Messages(props: Messages) {
@@ -16,8 +19,12 @@ export function Messages(props: Messages) {
     let newPost = useRef<HTMLTextAreaElement>(null);
 
     let Push = () => {
+        props.addMessage()
+        props.newChangeMessage('')
+    }
+    let OnChangeMessages = () => {
         let text = newPost.current?.value;
-        return alert(text)
+        props.newChangeMessage(text)
     }
 
 
@@ -29,7 +36,7 @@ export function Messages(props: Messages) {
             </div>
             <div className={s.dialogs}>
                 {MessagesMap}
-                <textarea ref={newPost}>  </textarea>
+                <textarea onChange={OnChangeMessages} ref={newPost} value={props.ChangeMessages}/>
                 <button onClick={Push}>Push</button>
             </div>
         </div>

@@ -2,11 +2,16 @@ import React from 'react';
 
 test.skip("ugvuyviy8",() => {
 
-    const Object = [1, 22, 34, 56, 34, 45, 45
-        ]
+    // let Object = {
+    //     '1':{id: 1, name: 'dima'},
+    //     '2':{id: 2, name: 'dima'},
+    //     '3':{id: 3, name: 'dima'},
+    //     '4':{id: 4, name: 'dima'},
+    // }
 
 
-   const Newobject =  Object.filter(Object =>  Object == 45 || Object == 34 )
 
-    expect(Newobject.length).toBe(4)
+
+
+    // expect(Object[1].name.length).toBe(4)
 })
