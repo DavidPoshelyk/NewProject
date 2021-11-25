@@ -7,8 +7,8 @@
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Contents/Contents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Contents/Contents.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Messages/Messages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Messages/Messages.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/State/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/State/state.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/new/01.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/new/01.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/renderDom.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/renderDom.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/renderDom.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="D:\NewProject\my-app\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -158,7 +158,9 @@
       <workItem from="1637572549952" duration="2527000" />
       <workItem from="1637593488941" duration="35000" />
       <workItem from="1637669185148" duration="636000" />
-      <workItem from="1637744263502" duration="12049000" />
+      <workItem from="1637744263502" duration="13392000" />
+      <workItem from="1637825289548" duration="5055000" />
+      <workItem from="1637830408941" duration="5367000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1635541021388</created>
@@ -258,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637405700344</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1637759579706</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1637759579706</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

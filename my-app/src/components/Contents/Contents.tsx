@@ -7,10 +7,11 @@ import {TypePosts} from "../State/state";
 
 type Contents = {
     posts: Array<TypePosts>
-    addpost:() => void
-    newtextpost:any
-    newChange: any
+    addPosts: () => void
+    newtextpost: string
+    newChange:(text:string|undefined)=> void
 }
+
 
 
 export function Contents(props: Contents) {
@@ -19,7 +20,7 @@ export function Contents(props: Contents) {
     let newPost = useRef<HTMLTextAreaElement>(null);
 
     let Push = () => {
-        props.addpost();
+        props.addPosts();
         props.newChange('')
     }
  let onChangePost = () => {

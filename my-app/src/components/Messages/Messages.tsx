@@ -2,14 +2,14 @@ import React, {useRef} from "react";
 import s from './Messeges.module.css'
 import {MessagesData} from "./Doalogs/MessagesData";
 import {DialogsData} from "./DialogsData";
-import {newChangeMessage, TypeDialogs, TypeMessages} from "../State/state";
+import { TypeDialogs, TypeMessages} from "../State/state";
 
 type  Messages = {
     dialogs: Array<TypeDialogs>
     messages: Array<TypeMessages>
-    ChangeMessages: any
-    addMessage:() => void
-    newChangeMessage:Function
+    Newtextmessage: string
+    addMessage:()=>void
+    newChangeMessage:(text:string|undefined)=> void
 }
 
 export function Messages(props: Messages) {
@@ -36,7 +36,7 @@ export function Messages(props: Messages) {
             </div>
             <div className={s.dialogs}>
                 {MessagesMap}
-                <textarea onChange={OnChangeMessages} ref={newPost} value={props.ChangeMessages}/>
+                <textarea onChange={OnChangeMessages} ref={newPost} value={props.Newtextmessage}/>
                 <button onClick={Push}>Push</button>
             </div>
         </div>

@@ -1,5 +1,10 @@
 import React from 'react';
-import {renderDom} from "../../renderDom";
+
+
+ let renderDom = () =>  {
+
+ }
+
 
 
 
@@ -80,12 +85,11 @@ export  type userImages = Array<string>
          info: state.Newtextpost
      }
      state.DataPosts.push(New);
-     renderDom(state)
+     renderDom()
  }
 export let newChange = (Newtext:any) => {
      state.Newtextpost = Newtext;
-     renderDom(state)
-    // console.log(Newtext)
+     renderDom()
  }
 export const  addMessage = () => {
     let Newtext: any = {
@@ -94,10 +98,15 @@ export const  addMessage = () => {
         images: "https://s0.rbk.ru/v6_top_pics/media/img/1/83/756079611261831.jpg"
     }
     state.MessagesData.push(Newtext)
-    renderDom(state)
+    renderDom()
  }
 
  export  let newChangeMessage = (New:any) => {
      state.Newtextmessage = New;
-     renderDom(state)
+     renderDom()
+
+
+ }
+ export  let subscriber = (observer:any) => {
+   renderDom = observer
  }
