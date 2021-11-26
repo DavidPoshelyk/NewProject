@@ -1,8 +1,7 @@
 import React from 'react';
 
 
- let renderDom = () =>  {
- }
+
 
  export type StateType = {
      Newtextmessage:any
@@ -39,7 +38,9 @@ export type TypePosts = {
 export  type userImages = Array<string>
 
 export let store = {
-    _state: {
+     _renderDom() {
+     },
+     _state: {
         Newtextpost: '',
         Newtextmessage: '',
 
@@ -77,7 +78,6 @@ export let store = {
     GetState() {
         return this._state
     },
-
     addPosts(){
         let New:TypePosts = {
             item: true,
@@ -85,11 +85,11 @@ export let store = {
             info: this._state.Newtextpost
         }
         this._state.DataPosts.push(New);
-        renderDom()
+        this._renderDom()
     },
     newChangePost(Newtext:any){
         this._state.Newtextpost = Newtext;
-        renderDom()
+        this._renderDom()
     },
     addMessage(){
         let Newtext: any = {
@@ -98,14 +98,14 @@ export let store = {
             images: "https://s0.rbk.ru/v6_top_pics/media/img/1/83/756079611261831.jpg"
         }
         this._state.MessagesData.push(Newtext)
-        renderDom()
+        this._renderDom()
     },
     newChangeMessage(New:any){
         this._state.Newtextmessage = New;
-        renderDom()
+        this._renderDom()
     },
     subscriber(observer:any) {
-        renderDom = observer
+        this._renderDom = observer
     }
  }
 
