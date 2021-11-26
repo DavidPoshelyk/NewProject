@@ -1,4 +1,5 @@
 .friends{
+   width: 100px;
     display: grid;
     margin: 10px;
     grid-gap: 10px 10px;
@@ -23,4 +24,13 @@
 }
 .friendsO a{
     text-decoration: none;
+}
+.colums button{
+
+    border-radius: 5px;
+    background-color: cadetblue;
+height: 20px;
+    margin: 10px;
+    width: 210px;
+    border-bottom-style: none;
 }

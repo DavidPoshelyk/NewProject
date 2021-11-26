@@ -25,15 +25,15 @@ export function Friends(props: Friends) {
 
 
     return ( <div>
-
-            <button onClick={()=> Colums(1)}>Columns 1</button>
-            <button onClick={()=> Colums(2)}>Columns 2</button>
-            <button onClick={()=> Colums(3)}>Columns 3</button>
-            <button onClick={()=> Colums(4)}>Columns 4</button>
-
+        <div className={s.colums}>
+            <button onClick={()=> Colums(1)}></button>
+            <button onClick={()=> Colums(2)}></button>
+            <button onClick={()=> Colums(3)}></button>
+            <button onClick={()=> Colums(4)}></button>
+        </div>
             <div style={styleFridens} className={s.friends}>
         {FriendsMap}
-    </div>
+           </div>
 </div>
 )
 }

@@ -9,7 +9,7 @@ type Contents = {
     posts: Array<TypePosts>
     addPosts: () => void
     newtextpost: string
-    newChange:(text:string|undefined)=> void
+    newChangePost:(text:string|undefined)=> void
 }
 
 
@@ -21,11 +21,11 @@ export function Contents(props: Contents) {
 
     let Push = () => {
         props.addPosts();
-        props.newChange('')
+        props.newChangePost('')
     }
  let onChangePost = () => {
      let text = newPost.current?.value;
-        props.newChange(text)
+        props.newChangePost(text)
 
  }
 

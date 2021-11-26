@@ -2,24 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {
-    addMessage,
-    addPosts,
-    newChange,
-    newChangeMessage,
-     state,
-    subscriber,
-} from "./components/State/state";
+import {store} from "./components/State/state";
 
 
 let renderDom = () => {
 
     ReactDOM.render(
         <React.StrictMode>
-            <App addMessage={addMessage} newChangeMessage={newChangeMessage} addposts={addPosts}  state={state}  newChange={newChange} />
+            <App addMessage={store.addMessage.bind(store)} newChangeMessage={store.newChangeMessage.bind(store)} addposts={store.addPosts.bind(store)}   newChangePost={store.newChangePost.bind(store)}  state={store.GetState()}/>
         </React.StrictMode>,
         document.getElementById('root')
     );
 }
 renderDom()
-subscriber(renderDom)
+store.subscriber(renderDom)
