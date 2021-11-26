@@ -7,9 +7,8 @@ import {TypePosts} from "../State/state";
 
 type Contents = {
     posts: Array<TypePosts>
-    addPosts: () => void
     newtextpost: string
-    newChangePost:(text:string|undefined)=> void
+    dispatch:any
 }
 
 
@@ -20,12 +19,12 @@ export function Contents(props: Contents) {
     let newPost = useRef<HTMLTextAreaElement>(null);
 
     let Push = () => {
-        props.addPosts();
-        props.newChangePost('')
+        props.dispatch({type:'ADD-POST'});
+        props.dispatch({type:'UPDATE-NEW-TEXT-POST', Newtext:''})
     }
  let onChangePost = () => {
      let text = newPost.current?.value;
-        props.newChangePost(text)
+        props.dispatch({type:'UPDATE-NEW-TEXT-POST', Newtext:text})
 
  }
 

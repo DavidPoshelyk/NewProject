@@ -78,19 +78,6 @@ export let store = {
     GetState() {
         return this._state
     },
-    addPosts(){
-        let New:TypePosts = {
-            item: true,
-            like: 0,
-            info: this._state.Newtextpost
-        }
-        this._state.DataPosts.push(New);
-        this._renderDom()
-    },
-    newChangePost(Newtext:any){
-        this._state.Newtextpost = Newtext;
-        this._renderDom()
-    },
     addMessage(){
         let Newtext: any = {
             id: 1,
@@ -106,8 +93,25 @@ export let store = {
     },
     subscriber(observer:any) {
         this._renderDom = observer
+    },
+
+    dispatch(action:any){
+         if(action.type ==='ADD-POST'){
+             let New:TypePosts = {
+                 item: true,
+                 like: 0,
+                 info: this._state.Newtextpost
+             }
+             this._state.DataPosts.push(New);
+             this._renderDom()
+         } else if (action.type === 'UPDATE-NEW-TEXT-POST'){
+             this._state.Newtextpost = action.Newtext;
+             this._renderDom()
+         }
+
     }
- }
+
+}
 
 
 

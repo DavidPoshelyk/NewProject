@@ -9,7 +9,7 @@ let renderDom = () => {
 
     ReactDOM.render(
         <React.StrictMode>
-            <App addMessage={store.addMessage.bind(store)} newChangeMessage={store.newChangeMessage.bind(store)} addposts={store.addPosts.bind(store)}   newChangePost={store.newChangePost.bind(store)}  state={store.GetState()}/>
+            <App addMessage={store.addMessage.bind(store)} newChangeMessage={store.newChangeMessage.bind(store)} dispatch={store.dispatch.bind(store)}  state={store.GetState()}/>
         </React.StrictMode>,
         document.getElementById('root')
     );

@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e5ac17eb-3795-4fcd-af5e-410df4e4552e" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Contents/Contents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Contents/Contents.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/State/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/State/state.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TodoList" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -160,6 +163,8 @@
       <workItem from="1637915524055" duration="1336000" />
       <workItem from="1637923188713" duration="4976000" />
       <workItem from="1637938967549" duration="28000" />
+      <workItem from="1637948227481" duration="351000" />
+      <workItem from="1637949519006" duration="1870000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1635541021388</created>
@@ -280,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637928548653</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1637948239011</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1637948239011</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

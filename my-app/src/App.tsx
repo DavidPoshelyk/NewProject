@@ -14,10 +14,9 @@ import {StateType} from "./components/State/state";
 
 type App = {
     state:StateType
-    addposts: () => void
-    newChangePost: (text: any) => void;
     addMessage: () => void;
     newChangeMessage: (text:string|undefined)=> void
+    dispatch:any
 
 }
 
@@ -28,7 +27,7 @@ function App(props: App) {
                 <Header/>
                 <Nav/>
                 <div className='contents'>
-                    <Route path='/contents' render={() => <Contents  newChangePost={props.newChangePost} newtextpost={props.state.Newtextpost} addPosts={props.addposts}  posts={props.state.DataPosts}/>}/>
+                    <Route path='/contents' render={() => <Contents  dispatch={props.dispatch} newtextpost={props.state.Newtextpost}   posts={props.state.DataPosts}/>}/>
                     <Route path='/messages' render={() => <Messages newChangeMessage={props.newChangeMessage} addMessage={props.addMessage} Newtextmessage={props.state.Newtextmessage} dialogs={props.state.DialogsData} messages={props.state.MessagesData}/>}/>
                     <Route path='/friends' render={() => <Friends friend={props.state.FriendsData} />}/>
                     <Route path='/settings' render={() => <Settings/>}/>
