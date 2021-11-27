@@ -104,10 +104,23 @@ export let store = {
              }
              this._state.DataPosts.push(New);
              this._renderDom()
-         } else if (action.type === 'UPDATE-NEW-TEXT-POST'){
-             this._state.Newtextpost = action.Newtext;
+         } else
+             if (action.type === 'UPDATE-NEW-TEXT-POST'){
+             this._state.Newtextpost = action.NewPost;
              this._renderDom()
-         }
+         } else
+             if (action.type === 'ADD-MESSAGE') {
+                 let New: any = {
+                     id: 1,
+                     messages: [this._state.Newtextmessage, this._state.Newtextmessage],
+                     images: "https://s0.rbk.ru/v6_top_pics/media/img/1/83/756079611261831.jpg"
+                 }
+                 this._state.MessagesData.push(New)
+                 this._renderDom()
+             } else if (action.type === 'UPDATE-NEW-TEXT-MESSAGE') {
+                 this._state.Newtextmessage = action.Newtextmessage;
+                 this._renderDom()
+             }
 
     }
 

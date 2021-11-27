@@ -27,8 +27,8 @@ function App(props: App) {
                 <Header/>
                 <Nav/>
                 <div className='contents'>
-                    <Route path='/contents' render={() => <Contents  dispatch={props.dispatch} newtextpost={props.state.Newtextpost}   posts={props.state.DataPosts}/>}/>
-                    <Route path='/messages' render={() => <Messages newChangeMessage={props.newChangeMessage} addMessage={props.addMessage} Newtextmessage={props.state.Newtextmessage} dialogs={props.state.DialogsData} messages={props.state.MessagesData}/>}/>
+                    <Route path='/contents' render={() => <Contents  dispatch={props.dispatch} state={props.state} />}/>
+                    <Route path='/messages' render={() => <Messages state={props.state} dispatch={props.dispatch} />}/>
                     <Route path='/friends' render={() => <Friends friend={props.state.FriendsData} />}/>
                     <Route path='/settings' render={() => <Settings/>}/>
                 </div>
