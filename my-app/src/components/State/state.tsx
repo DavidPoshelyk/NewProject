@@ -1,16 +1,37 @@
 import React from 'react';
 
+export type _stateType = {
+    Newtextpost:string
+    Newtextmessage:string
+    DataPosts:Array<TypePosts>
+    MessagesData:Array<TypeMessages>
+    DialogsData:Array<TypeDialogs>
+    FriendsData:Array<TypeFriends>
+
+}
 
 
 
- export type StateType = {
-     Newtextmessage:any
-     Newtextpost:any
-     DataPosts:Array<TypePosts>
-     MessagesData:Array<TypeMessages>
-     DialogsData: Array<TypeDialogs>
-     FriendsData: Array<TypeFriends>
- }
+export type TypeStore = {
+    _renderDom:()=>void
+    _state:_stateType
+    newChangeMessage:(New:string)=>void
+    subscriber:(observer:any)=>void
+    dispatch:(action:string)=>void
+    GetState:()=>{}
+    addMessage:()=>void
+}
+
+
+
+ // export type StateType = {
+ //     Newtextmessage:string
+ //     Newtextpost:string
+ //     DataPosts:Array<TypePosts>
+ //     MessagesData:Array<TypeMessages>
+ //     DialogsData: Array<TypeDialogs>
+ //     FriendsData: Array<TypeFriends>
+ // }
  export  type TypeFriends = {
      id: number,
      images: string,
@@ -37,7 +58,7 @@ export type TypePosts = {
 }
 export  type userImages = Array<string>
 
-export let store = {
+export let store:TypeStore = {
      _renderDom() {
      },
      _state: {
@@ -79,7 +100,7 @@ export let store = {
         return this._state
     },
     addMessage(){
-        let Newtext: any = {
+        let Newtext: TypeMessages = {
             id: 1,
             messages: [this._state.Newtextmessage, this._state.Newtextmessage],
             images: "https://s0.rbk.ru/v6_top_pics/media/img/1/83/756079611261831.jpg"
@@ -87,12 +108,12 @@ export let store = {
         this._state.MessagesData.push(Newtext)
         this._renderDom()
     },
-    newChangeMessage(New:any){
+    newChangeMessage(New:string){
         this._state.Newtextmessage = New;
         this._renderDom()
     },
-    subscriber(observer:any) {
-        this._renderDom = observer
+    subscriber(renderDom) {
+        this._renderDom = renderDom
     },
 
     dispatch(action:any){
@@ -110,7 +131,7 @@ export let store = {
              this._renderDom()
          } else
              if (action.type === 'ADD-MESSAGE') {
-                 let New: any = {
+                 let New: TypeMessages = {
                      id: 1,
                      messages: [this._state.Newtextmessage, this._state.Newtextmessage],
                      images: "https://s0.rbk.ru/v6_top_pics/media/img/1/83/756079611261831.jpg"

@@ -2,16 +2,17 @@ import React, {useRef} from "react";
 import s from './Messeges.module.css'
 import {MessagesData} from "./Doalogs/MessagesData";
 import {DialogsData} from "./DialogsData";
+import {_stateType, TypeStore} from "../State/state";
 
 
 type  Messages = {
-    dispatch:Function
-    state: any
-}
+    dispatch: ({})=> void
+    state: _stateType
 
+}
 export function Messages({state,...props}: Messages) {
-    let DialogsMap = state.DialogsData.map((d:any) => <DialogsData name={d.name} id={d.id} image={d.image}/>)
-    let MessagesMap = state.MessagesData.map((m:any) => <MessagesData id={m.id} images={m.images} messages={m.messages}/>)
+    let DialogsMap = state.DialogsData.map(d => <DialogsData name={d.name} id={d.id} image={d.image}/>)
+    let MessagesMap = state.MessagesData.map(m => <MessagesData id={m.id} images={m.images} messages={m.messages}/>)
 
     let newPost = useRef<HTMLTextAreaElement>(null);
 
