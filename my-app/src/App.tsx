@@ -14,8 +14,6 @@ import {Friends} from "./components/Friends/Friends";
 
 type App = {
     state:any
-    // addMessage: () => void;
-    // newChangeMessage: ()=> void
     dispatch:(action:any)=>void
 
 }

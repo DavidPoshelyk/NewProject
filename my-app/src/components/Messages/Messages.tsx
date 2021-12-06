@@ -2,7 +2,7 @@ import React, {useRef} from "react";
 import s from './Messeges.module.css'
 import {MessagesData} from "./Doalogs/MessagesData";
 import {DialogsData} from "./DialogsData";
-import {_stateType, TypeStore} from "../State/state";
+import {_stateType, AddMessageActionCreator,  UpdateNewTextMessageActionCreator} from "../State/state";
 
 
 type  Messages = {
@@ -17,12 +17,12 @@ export function Messages({state,...props}: Messages) {
     let newPost = useRef<HTMLTextAreaElement>(null);
 
     let Push = () => {
-        props.dispatch({type:'ADD-MESSAGE'});
-        props.dispatch({type:'UPDATE-NEW-TEXT-MESSAGE', Newtextmessage:''})
+        props.dispatch(AddMessageActionCreator());
+        props.dispatch(UpdateNewTextMessageActionCreator(''))
     }
     let OnChangeMessages = () => {
         let text = newPost.current?.value;
-        props.dispatch({type:'UPDATE-NEW-TEXT-MESSAGE', Newtextmessage:text})
+        if(text) props.dispatch(UpdateNewTextMessageActionCreator(text))
     }
 
 

@@ -1,5 +1,11 @@
 import React from 'react';
 
+
+const ADD_POST = 'ADD-POST'
+const UPDATE_NEW_TEXT_POST = 'UPDATE-NEW-TEXT-POST'
+const ADD_MESSAGE = 'ADD-MESSAGE'
+const UPDATE_NEW_TEXT_MESSAGE = 'UPDATE-NEW-TEXT-MESSAGE'
+
 export type _stateType = {
     Newtextpost:string
     Newtextmessage:string
@@ -9,9 +15,6 @@ export type _stateType = {
     FriendsData:Array<TypeFriends>
 
 }
-
-
-
 export type TypeStore = {
     _renderDom:()=>void
     _state:_stateType
@@ -139,7 +142,7 @@ export let store:TypeStore = {
                  this._state.MessagesData.push(New)
                  this._renderDom()
              } else if (action.type === 'UPDATE-NEW-TEXT-MESSAGE') {
-                 this._state.Newtextmessage = action.Newtextmessage;
+                 this._state.Newtextmessage = action.NewTextMessage;
                  this._renderDom()
              }
 
@@ -148,5 +151,9 @@ export let store:TypeStore = {
 }
 
 
+export const AddPostActionCreator = () => ({type:ADD_POST})
+export const UpdateNewTextPostActionCreator = (text:string)=> ({type:UPDATE_NEW_TEXT_POST,NewPost:text })
+export const AddMessageActionCreator = () => ({type:ADD_MESSAGE})
+export const UpdateNewTextMessageActionCreator = (text:string)=> ({type:UPDATE_NEW_TEXT_MESSAGE, NewTextMessage:text })
 
 

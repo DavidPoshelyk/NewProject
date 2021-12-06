@@ -2,13 +2,13 @@ import React, {useRef} from "react";
 import s from './Contents.module.css'
 import {MyInfo} from "./MyInfo.";
 import {Posts} from "./Posts";
-import {_stateType} from "../State/state";
+import {_stateType, AddPostActionCreator, UpdateNewTextPostActionCreator} from "../State/state";
 
 
 
 type Contents = {
     state:_stateType
-    dispatch:({})=>void
+    dispatch:Function
 }
 
 
@@ -19,12 +19,13 @@ export function Contents({dispatch,state,...props}: Contents) {
     let newPost = useRef<HTMLTextAreaElement>(null);
 
     let Push = () => {
-        dispatch({type:'ADD-POST'});
-        dispatch({type:'UPDATE-NEW-TEXT-POST', NewPost:''})
+        dispatch(AddPostActionCreator());
+        dispatch(UpdateNewTextPostActionCreator(''))
     }
    let onChangePost = () => {
      let text = newPost.current?.value;
-        dispatch({type:'UPDATE-NEW-TEXT-POST', NewPost:text})
+     if(text)
+         dispatch(UpdateNewTextPostActionCreator(text))
 
  }
 
