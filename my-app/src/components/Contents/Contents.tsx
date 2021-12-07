@@ -30,7 +30,7 @@ export function Contents({dispatch,state,...props}: Contents) {
  }
 
     return <div>
-        <MyInfo/>
+        <MyInfo state={state}/>
         <div className={s.input}>
             <h1> New Post</h1>
             <textarea onChange={onChangePost} ref={newPost} value={state.Newtextpost}/>

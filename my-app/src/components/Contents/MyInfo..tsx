@@ -2,7 +2,12 @@ import s from "./Contents.module.css";
 import images from "../../images/santa-katarina-braziliya (1920x1080).jpg";
 import React from "react";
 
-export const MyInfo = () => {
+type TypeMyInfo = {
+    state: any
+}
+
+
+export const MyInfo = ({state,...props}:TypeMyInfo) => {
     return <div>
         <img className={s.imagesFon} src={images}/>
         <div className={s.profile}>
@@ -11,10 +16,12 @@ export const MyInfo = () => {
             </div>
 
             <div className={s.text}>
-            <li> my info</li>
-            <li> my age</li>
-            <li> the weight</li>
-            <li> position</li>
+
+                <li> my age</li>
+                <li> married</li>
+                <li> education</li>
+                <li> my Email: {(state.GeneralSettings.Email.isDone ? state.GeneralSettings.Email.data : 'oh no')}</li>
+
         </div>
     </div>
     </div>

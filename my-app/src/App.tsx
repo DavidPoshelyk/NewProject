@@ -28,7 +28,7 @@ function App(props: App) {
                     <Route path='/contents' render={() => <Contents  dispatch={props.dispatch} state={props.state} />}/>
                     <Route path='/messages' render={() => <Messages state={props.state} dispatch={props.dispatch} />}/>
                     <Route path='/friends' render={() => <Friends friend={props.state.FriendsData} />}/>
-                    <Route path='/settings' render={() => <Settings/>}/>
+                    <Route path='/settings' render={() => <Settings dispatch={props.dispatch} state={props.state} />}/>
                 </div>
             </div>
         </BrowserRouter>
