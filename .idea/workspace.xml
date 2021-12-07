@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5ac17eb-3795-4fcd-af5e-410df4e4552e" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Settings/MenuSettings/BlocSettings.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Settings/MenuSettings/ConfidentialitySettings.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Settings/MenuSettings/GeneralSettings.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Settings/MenuSettings/SecuritySettings.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Settings/NavSettings.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Contents/Contents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Contents/Contents.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Contents/MyInfo..tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Contents/MyInfo..tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Settings/Settings.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Settings/Settings.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Settings/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Settings/Settings.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/State/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/State/state.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +167,7 @@
       <workItem from="1638211352033" duration="18000" />
       <workItem from="1638290834100" duration="38000" />
       <workItem from="1638526253656" duration="5476000" />
-      <workItem from="1638788957093" duration="24170000" />
+      <workItem from="1638788957093" duration="25092000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1635541021388</created>
@@ -333,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638791057330</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1638886386226</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1638886386226</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

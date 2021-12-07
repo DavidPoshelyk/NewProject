@@ -17,10 +17,10 @@ export const MyInfo = ({state,...props}:TypeMyInfo) => {
 
             <div className={s.text}>
 
-                <li> my age</li>
-                <li> married</li>
-                <li> education</li>
-                <li> my Email: {(state.GeneralSettings.Email.isDone ? state.GeneralSettings.Email.data : 'oh no')}</li>
+                <li> my age {state.GeneralSettings.myAge.data}</li>
+                <li> married {state.GeneralSettings.married.data}</li>
+                <li> education {state.GeneralSettings.education.data}</li>
+                <li> my Email {state.GeneralSettings.Email.data}</li>
 
         </div>
     </div>
