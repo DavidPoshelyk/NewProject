@@ -1,8 +1,8 @@
 import React from "react";
-import {TypeMessages} from "../../State/state";
+
 import d from './MessagesData.module.css'
 
-export const MessagesData: React.FC<TypeMessages> = (props) => {
+export const MessagesData = (props: any) => {
 
     return <div className={d.dialogs}>
         <div className={d.you}>

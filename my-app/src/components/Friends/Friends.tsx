@@ -1,17 +1,15 @@
 import React, {useState} from "react";
 import s from './Friends.module.css'
-import {TypeFriends} from "../State/state";
+
 import { NavLink } from "react-router-dom";
 
-type Friends = {
-    friend: Array<TypeFriends>
-}
 
-export function Friends(props: Friends) {
+
+export function Friends(props: any) {
 
 
 
-    let FriendsMap = props.friend.map(f =>
+    let FriendsMap = props.friend.map((f:any) =>
         <div className={s.friendsO}>
             <img src={f.images}/>
             <div>  <NavLink to="{f.id}"> {f.name}</NavLink></div>
