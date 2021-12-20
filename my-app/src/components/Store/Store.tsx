@@ -1,7 +1,7 @@
 import React from 'react';
-import PostsReducer from "../../Reducer/Posts-reducer";
-import MessagesReducer from "../../Reducer/Messages-reducer"
-import SettingsReducer from "../../Reducer/Settings-reducer";
+import PostsReducer from "../../Redux/Posts-reducer";
+import MessagesReducer from "../../Redux/Messages-reducer"
+import SettingsReducer from "../../Redux/Settings-reducer";
 
 
 

@@ -19,6 +19,7 @@ type App = {
 }
 
 function App(props: App) {
+    // console.log(props)
     return (
         <BrowserRouter>
             <div className="grid">

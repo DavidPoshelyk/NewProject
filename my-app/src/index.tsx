@@ -2,17 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {store} from "./components/State/state";
+import store from "./Redux/Redux";
 
 
-let renderDom = () => {
+let renderDom = (state: any) => {
 
     ReactDOM.render(
         <React.StrictMode>
-            <App  dispatch={store.dispatch.bind(store)}  state={store.GetState()}/>
+            <App  dispatch={store.dispatch.bind(store)}  state={state}/>
         </React.StrictMode>,
         document.getElementById('root')
     );
 }
-renderDom()
-store.subscriber(renderDom)
+renderDom(store.getState())
+
+store.subscribe(() => {
+    let state = store.getState()
+    renderDom(state)
+})

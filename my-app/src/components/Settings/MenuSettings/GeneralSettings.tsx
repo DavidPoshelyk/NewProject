@@ -1,9 +1,9 @@
 import s  from './BlocSettings.module.css'
-import {SaveGeneralSettings,
+import SettingsReducer, {SaveGeneralSettings,
     UpdateNewTextGeneralEducation,
     UpdateNewTextGeneralMarried,
     UpdateNewTextGeneralMyAge, UpdateNewTextGeneralMyEmail
-} from "../../../Reducer/Settings-reducer";
+} from "../../../Redux/Settings-reducer";
 import {ChangeEvent} from "react";
 
 
@@ -37,30 +37,30 @@ function GeneralSettings({state,dispatch,...props}:any) {
 }
 
 
-
+    console.log(state.GeneralSettings)
 
 
     return (
         <div className={s.GeneralSettings}>
             <div>
                 <span>My age</span>
-                <textarea value={state.GeneralSettings.myAge.NewTextGeneralMyage} onChange={(e) =>ChangeMyAge(e) } placeholder={state.GeneralSettings.myAge.data}/>
-                <input   checked={state.GeneralSettings.myAge.isDone} type='checkbox'/>
+                <textarea value={state.SettingsReducer.myAge.NewTextGeneralMyage} onChange={(e) =>ChangeMyAge(e) } placeholder={state.SettingsReducer.myAge.data}/>
+                <input   checked={state.SettingsReducer.myAge.isDone} type='checkbox'/>
             </div>
             <div>
                 <span>Married</span>
-                <textarea value={state.GeneralSettings.married.NewTextGeneralMarried} onChange={(e)=> ChangeMarried(e) } placeholder={state.GeneralSettings.married.data}/>
-                <input  checked={state.GeneralSettings.married.isDone} type='checkbox' />
+                <textarea value={state.SettingsReducer.married.NewTextGeneralMarried} onChange={(e)=> ChangeMarried(e) } placeholder={state.SettingsReducer.married.data}/>
+                <input  checked={state.SettingsReducer.married.isDone} type='checkbox' />
             </div>
             <div>
                 <span>Education</span>
-                <textarea  value={state.GeneralSettings.education.NewTextGeneralEducation} onChange={(e)=> ChangeEducation(e) } placeholder={state.GeneralSettings.education.data}/>
-                <input  checked={state.GeneralSettings.education.isDone} type='checkbox' />
+                <textarea  value={state.SettingsReducer.education.NewTextGeneralEducation} onChange={(e)=> ChangeEducation(e) } placeholder={state.SettingsReducer.education.data}/>
+                <input  checked={state.SettingsReducer.education.isDone} type='checkbox' />
             </div>
             <div>
                 <span>My Email</span>
-                <textarea value={state.GeneralSettings.Email.NewTextGeneralMyEmail} onChange={(e) => ChangeMyEmail(e) } placeholder={state.GeneralSettings.Email.data}/>
-                <input  checked={state.GeneralSettings.Email.isDone} type='checkbox' />
+                <textarea value={state.SettingsReducer.Email.NewTextGeneralMyEmail} onChange={(e) => ChangeMyEmail(e) } placeholder={state.SettingsReducer.Email.data}/>
+                <input  checked={state.SettingsReducer.Email.isDone} type='checkbox' />
             </div>
             <button onClick={()=> Save()}>SAVE</button>
         </div>
