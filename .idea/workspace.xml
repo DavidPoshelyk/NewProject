@@ -2,19 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5ac17eb-3795-4fcd-af5e-410df4e4552e" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
-      <change afterPath="$PROJECT_DIR$/my-app/src/Redux/Redux.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/Reducer/Messages-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Redux/Messages-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/Reducer/Posts-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Redux/Posts-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/Reducer/Settings-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Redux/Settings-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Contents/Contents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Contents/Contents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Contents/MyInfo..tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Contents/MyInfo..tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Messages/Messages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Messages/Messages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Settings/MenuSettings/GeneralSettings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Settings/MenuSettings/GeneralSettings.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/State/state.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Store/Store.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +61,7 @@
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/my-app/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-    <property name="ts.external.directory.path" value="D:\NewProject\my-app\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -95,6 +97,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/my-app/package.json" />
       <command value="run" />
@@ -117,6 +129,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start (1)" />
         <item itemvalue="Jest.ugvuyviy8" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.build" />
@@ -185,7 +198,7 @@
       <workItem from="1639565502239" duration="11261000" />
       <workItem from="1639644333014" duration="17000" />
       <workItem from="1639749362915" duration="630000" />
-      <workItem from="1640017828950" duration="4190000" />
+      <workItem from="1640017828950" duration="4783000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1635541021388</created>
@@ -362,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639576862173</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1640022266024</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1640022266025</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
