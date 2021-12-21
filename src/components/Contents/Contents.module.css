@@ -1,0 +1,43 @@
+.profile{
+    width: auto;
+    display: grid;
+    grid-template-columns: 3fr 12fr;
+    padding: 20px;
+
+
+}
+.imagesFon {
+    width: 1300px;
+    height: 250px;
+}
+.profile img{
+    width: 200px;
+}
+.text{
+
+
+}
+.posts{
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    border: 4px solid #545454;
+}
+.posts img{
+    padding: 10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}
+.textPosts{
+    margin: 2px;
+    padding: 10px ;
+
+}
+.input{
+    padding: 20px;
+}
+.arg{
+    margin: 10px;
+}

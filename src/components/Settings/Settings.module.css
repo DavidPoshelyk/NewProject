@@ -1,0 +1,19 @@
+.globalSettings{
+    display: grid;
+    grid-template-columns: 190px 1fr;
+
+}
+
+.active{
+    color:red;
+}
+.navSettings{
+    margin-left: 20px;
+}
+.navSettings div{
+    padding-top: 40px;
+    font-size: 20px;
+}
+.navSettings div a{
+    text-decoration: none;
+}
