@@ -8,6 +8,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import {Messages} from "./components/Messages/Messages";
 import {Settings} from "./components/Settings/Settings";
 import {Friends} from "./components/Friends/Friends";
+import {ContentsContainer} from "./components/Contents/ContentsContainer";
 
 
 
@@ -19,16 +20,16 @@ type App = {
 }
 
 function App(props: App) {
-    // console.log(props)
+
     return (
         <BrowserRouter>
             <div className="grid">
                 <Header/>
                 <Nav/>
                 <div className='contents'>
-                    <Route path='/contents' render={() => <Contents  dispatch={props.dispatch} state={props.state} />}/>
+                    <Route path='/contents' render={() => <ContentsContainer  dispatch={props.dispatch} state={props.state} />}/>
                     <Route path='/messages' render={() => <Messages state={props.state} dispatch={props.dispatch} />}/>
-                    <Route path='/friends' render={() => <Friends friend={props.state.FriendsData} />}/>
+                    <Route path='/friends' render={() => <Friends state={props.state} />}/>
                     <Route path='/settings' render={() => <Settings dispatch={props.dispatch} state={props.state} />}/>
                 </div>
             </div>

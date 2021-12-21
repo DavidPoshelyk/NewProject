@@ -1,14 +1,15 @@
 import s from "./Contents.module.css";
 import images from "../../images/santa-katarina-braziliya (1920x1080).jpg";
 import React from "react";
-import SettingsReducer from "../../Redux/Settings-reducer";
+
 
 type TypeMyInfo = {
-    state: any
+    data: any
 }
 
 
-export const MyInfo = ({state,...props}:TypeMyInfo) => {
+export const MyInfo = ({data,...props}:TypeMyInfo) => {
+
     return <div>
         <img className={s.imagesFon} src={images}/>
         <div className={s.profile}>
@@ -18,10 +19,10 @@ export const MyInfo = ({state,...props}:TypeMyInfo) => {
 
             <div className={s.text}>
 
-                <li> my age {state.SettingsReducer.myAge.data}</li>
-                <li> married {state.SettingsReducer.married.data}</li>
-                <li> education {state.SettingsReducer.education.data}</li>
-                <li> my Email {state.SettingsReducer.Email.data}</li>
+                <li> my age {data.myAge.data}</li>
+                <li> married {data.married.data}</li>
+                <li> education {data.education.data}</li>
+                <li> my Email {data.Email.data}</li>
 
         </div>
     </div>

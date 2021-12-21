@@ -7,8 +7,8 @@ import SettingsReducer from "../../Redux/Settings-reducer";
 
 
 
-
-
+export type DialogsDataType = Array<{ id: string, name: string, image: string }>
+export type FriendsDataType = Array<{ id: number, images: string, name: string, status: boolean }>
  export type dataPostsType = {data: Array<{ item: boolean, like: number, info: string }>, Newtextpost: string }
  export type messagesDataType = { data: Array<{ id: number, messages: Array<string>, images: string }>, Newtextmessage: string }
 export type GeneralSettingsType ={
@@ -22,8 +22,8 @@ export type GeneralSettingsType ={
 export type _stateType = {
     DataPosts: dataPostsType
     MessagesData: messagesDataType
-    DialogsData: Array<{ id: string, name: string, image: string }>
-    FriendsData: Array<{ id: number, images: string, name: string, status: boolean }>
+    DialogsData: DialogsDataType
+    FriendsData: FriendsDataType
     GeneralSettings:GeneralSettingsType
 
 }
