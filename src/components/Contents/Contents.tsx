@@ -5,11 +5,7 @@ import s from './Contents.module.css'
 type ContentsType = {
     Push:()=> void
     onChangePost:(e:ChangeEvent<HTMLTextAreaElement> )=>void
-    value: string
-
-
-}
-
+    value: string }
 
 export function Contents({Push,onChangePost,value,...props}: ContentsType) {
 

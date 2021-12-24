@@ -4,19 +4,24 @@ import './index.css';
 import App from './App';
 import store from "./Redux/Redux";
 
+import {Provider} from "react-redux";
 
-let renderDom = (state: any) => {
+
+let renderDom = (store?: any) => {
 
     ReactDOM.render(
         <React.StrictMode>
-            <App  dispatch={store.dispatch.bind(store)}  state={state}/>
+            <Provider store={store}>
+            <App/>
+            </Provider>
         </React.StrictMode>,
         document.getElementById('root')
     );
 }
-renderDom(store.getState())
+renderDom(store)
 
 store.subscribe(() => {
-    let state = store.getState()
-    renderDom(state)
+
+    renderDom(store)
 })
+//dispatch={store.dispatch.bind(store)}

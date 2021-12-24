@@ -1,36 +1,30 @@
 import React, {ChangeEvent} from "react";
-import {MyInfo} from "./MyInfo.";
-import {Posts} from "./Posts";
-import { AddPostActionCreator, UpdateNewTextPostActionCreator} from "../../Redux/Posts-reducer";
+import {AddPostActionCreator, UpdateNewTextPostActionCreator} from "../../Redux/Posts-reducer";
 import {Contents} from "./Contents";
+import {connect} from "react-redux";
 
 
-
-
-
-
-export function ContentsContainer({dispatch,state,...props}: any) {
-
-    let Push = () => {
-        dispatch(AddPostActionCreator());
-        dispatch(UpdateNewTextPostActionCreator(''))
+const mapStateToProps = (state: any) => {
+    return {
+        value: state.PostsReducer.Newtextpost
     }
-    let onChangePost = (e:ChangeEvent<HTMLTextAreaElement> ) => {
-        dispatch(UpdateNewTextPostActionCreator(e.currentTarget.value))
-
+}
+const mapDispatchToProps = (dispatch: any) => {
+    return {
+        Push: () => {
+            dispatch(AddPostActionCreator())
+            dispatch(UpdateNewTextPostActionCreator(''))
+        },
+        onChangePost:(e: ChangeEvent<HTMLTextAreaElement>)=>{
+            dispatch(UpdateNewTextPostActionCreator(e.currentTarget.value))
+        }
     }
 
-    return (
-        <div>
-                <MyInfo data={state.SettingsReducer}/>
-                <Contents  value={state.PostsReducer.Newtextpost} Push={Push} onChangePost={onChangePost}  />
-                <Posts data={state.PostsReducer.data}/>
+}
 
-        </div>
+ export const ContentsContainer = connect(mapStateToProps,mapDispatchToProps)(Contents)
 
-    )}
-
-
+  
 
 
 

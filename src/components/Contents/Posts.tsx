@@ -1,7 +1,6 @@
 import React from "react";
 import s from "./Contents.module.css";
 
-
 export const Posts = (props:any) => {
     return  props.data.map((i:any) => {
         return (

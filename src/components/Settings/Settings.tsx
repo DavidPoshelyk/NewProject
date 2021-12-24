@@ -9,14 +9,14 @@ import SecuritySettings from "./MenuSettings/SecuritySettings";
 
 
 
-export function Settings({state,dispatch,...props}:any) {
+export function Settings({store,...props}:any) {
     return (
         <div className={s.globalSettings}>
             <div className={s.menuSettings}>
              <NavSettings/>
             </div>
             <div className={s.settings}>
-                <Route path='/settings/general' render={() => <GeneralSettings state={state} dispatch={dispatch}/> }/>
+                <Route path='/settings/general' render={() => <GeneralSettings/> }/>
                 <Route path='/security' render={() => <ConfidentialitySettings/> }/>
                 <Route path='/confidentiality' render={() => <SecuritySettings/>}/>
             </div>

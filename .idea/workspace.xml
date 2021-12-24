@@ -2,18 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5ac17eb-3795-4fcd-af5e-410df4e4552e" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
-      <change afterPath="$PROJECT_DIR$/src/Redux/Dialogs-reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Redux/Friends-reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Contents/ContentsContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StoreContext.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Contents/MyInfoContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Contents/PostsContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Contents/ProfileContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Redux.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Redux.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contents/Contents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contents/Contents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contents/MyInfo..tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contents/MyInfo..tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contents/Posts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contents/Posts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Posts-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Posts-reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contents/ContentsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contents/ContentsContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Friends/Friends.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends/Friends.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Messages/Messages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages/Messages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Store/Store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Store/Store.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Settings/MenuSettings/GeneralSettings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/MenuSettings/GeneralSettings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Settings/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/new/01.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TodoList" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -82,6 +87,16 @@
       <test-names>
         <test-name value="ugvuyviy8" />
       </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="build (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -127,6 +142,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start (1)" />
+        <item itemvalue="npm.build (1)" />
         <item itemvalue="Jest.ugvuyviy8" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.build" />
@@ -198,7 +214,8 @@
       <workItem from="1640017828950" duration="4783000" />
       <workItem from="1640022686623" duration="900000" />
       <workItem from="1640076422794" duration="812000" />
-      <workItem from="1640077262146" duration="3984000" />
+      <workItem from="1640077262146" duration="4782000" />
+      <workItem from="1640349823027" duration="9227000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1635541021388</created>
@@ -396,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640076651733</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1640081686264</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1640081686264</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

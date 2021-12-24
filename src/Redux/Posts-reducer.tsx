@@ -10,16 +10,10 @@ let initialState = { data:[{item: true, like: 4, info: 'Html hvuyvivfi'}], Newte
 const PostsReducer = (state:dataPostsType = initialState, action:any): dataPostsType => {
     switch (action.type) {
         case ADD_POST:
-            let New = {
-                item: true,
-                like: 0,
-                info: state.Newtextpost
-            }
-            state.data.push(New);
-            return state
+            let New = {item: true, like: 0, info: state.Newtextpost}
+            return {...state, data:[New,...state.data]}
         case UPDATE_NEW_TEXT_POST:
-            state.Newtextpost = action.NewPost;
-            return state
+            return {...state, Newtextpost:action.NewPost}
         default: return  state
     }
 

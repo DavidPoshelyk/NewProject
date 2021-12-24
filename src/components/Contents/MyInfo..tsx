@@ -7,7 +7,6 @@ type TypeMyInfo = {
     data: any
 }
 
-
 export const MyInfo = ({data,...props}:TypeMyInfo) => {
 
     return <div>
