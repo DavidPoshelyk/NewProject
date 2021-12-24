@@ -6,9 +6,10 @@ import {Nav} from "./components/Nav/Nav";
 import {BrowserRouter, Route} from 'react-router-dom';
 import {Messages} from "./components/Messages/Messages";
 import {Settings} from "./components/Settings/Settings";
-import {Friends} from "./components/Friends/Friends";
-import {ContentsContainer} from "./components/Contents/ContentsContainer";
+
 import ProfileContainer from "./components/Contents/ProfileContainer";
+import { FriendsContainer } from './components/Friends/FriendsContainer';
+import {MessagesContainer} from "./components/Messages/MessagesContainer";
 
 
 
@@ -23,8 +24,8 @@ function App() {
                 <Nav/>
                 <div className='contents'>
                     <Route path='/contents' render={() => <ProfileContainer/>}/>
-                    <Route path='/messages' render={() => <Messages/>}/>
-                    <Route path='/friends' render={() => <Friends/>}/>
+                    <Route path='/messages' render={() => <MessagesContainer/>}/>
+                    <Route path='/friends' render={() => <FriendsContainer/>}/>
                     <Route path='/settings' render={() => <Settings/>}/>
                 </div>
             </div>

@@ -4,20 +4,12 @@ import {NavLink} from "react-router-dom";
 
 
 
+export const DialogsData = ({data,...props}:any) => {
 
+    return(
+        data.map((m:any)=> {
+            let past = '/dialogs/' + m.id
+            return(<div className={s.user}><div><img src={m.image}/></div><div><NavLink to={past}> {m.name} </NavLink></div></div>)})
+    )
 
-
-export const DialogsData = (props:any) => {
-    let past = '/dialogs/' + props.id
-    return <div className={s.user}>
-        <div>
-            <img src={props.image}/>
-        </div>
-
-
-        <div>
-            <NavLink to={past}> {props.name} </NavLink>
-        </div>
-
-        </div>
 }

@@ -13,14 +13,12 @@ const MessagesReducer = (state:messagesDataType = initialState, action:any):mess
             id: 1,
             messages: [state.Newtextmessage, state.Newtextmessage],
             images: "https://s0.rbk.ru/v6_top_pics/media/img/1/83/756079611261831.jpg"}
-            state.data.push(New)
-            return state
+            return {...state, data:[New,...state.data]}
 
 
         case UPDATE_NEW_TEXT_MESSAGE:
-           state.Newtextmessage = action.NewTextMessage;
             console.log(action.NewTextMessage)
-          return state
+            return {...state, Newtextmessage:action.NewTextMessage}
 
         default: return  state
     };
