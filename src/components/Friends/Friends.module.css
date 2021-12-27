@@ -1,36 +1,52 @@
 .friends{
-   width: 100px;
+    margin: 5px ;
+
+    width: auto;
     display: grid;
-    margin: 10px;
-    grid-gap: 10px 10px;
-    /*grid-template-columns: 1fr 1fr 1fr 1fr    ;*/
+    /*margin: 10px;*/
+    /*grid-gap: 10px 10px;*/
+    grid-template-columns:100px minmax(500px ,700px);
+    /*background-color: #0074D9;*/
+    /*padding: 10px;*/
+
+
 
 
 }
-.friends img{
-    width: 200px;
+.images img {
+    margin-top: 5px;
+    border-radius: 40px;
+    width: 70px;
+    height: 70px;
+
 }
-.friendsO {
+.images button{
+    /*margin: 7px;*/
+}
+.info{
+    height: 50px;
+    border: 2px solid black;
+    background-color: #59a8e5;
+border-radius: 15px;
     display: grid;
-    justify-items: center;
-
-    background-color: #418aa8;
-    border-radius: 20px;
-
-
+    grid-template-columns:90% 10%;
+    grid-template-rows: 3fr 1fr;
+    padding: 10px;
 }
-.friendsO img{
-    margin: 10px;
-}
-.friendsO a{
+.button {
+    border-radius: 4px;
+    background-color: #05111a;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
     text-decoration: none;
+    cursor: pointer;
 }
-.colums button{
 
-    border-radius: 5px;
-    background-color: cadetblue;
-height: 20px;
-    margin: 10px;
-    width: 210px;
-    border-bottom-style: none;
-}
+.button:hover {opacity: 1}

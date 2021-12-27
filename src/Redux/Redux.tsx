@@ -2,8 +2,9 @@ import {combineReducers, createStore} from "redux";
 import MessagesReducer from "./Messages-reducer";
 import PostsReducer from "./Posts-reducer";
 import SettingsReducer from "./Settings-reducer";
-import FriendsReducer from "./Friends-reducer";
 import DialogsReducer from "./Dialogs-reducer";
+import  FriendsReducer  from "./Friends-reducer";
+
 
 
 

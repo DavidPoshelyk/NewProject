@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5ac17eb-3795-4fcd-af5e-410df4e4552e" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
+      <change afterPath="$PROJECT_DIR$/src/Redux/Friends-reducer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Friends-reducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Messages-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Messages-reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Redux.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Redux.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Friends/Friends.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends/Friends.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Friends/Friends.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends/Friends.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Friends/FriendsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends/FriendsContainer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TodoList" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -199,7 +207,9 @@
       <workItem from="1640022686623" duration="900000" />
       <workItem from="1640076422794" duration="812000" />
       <workItem from="1640077262146" duration="4782000" />
-      <workItem from="1640349823027" duration="14198000" />
+      <workItem from="1640349823027" duration="14235000" />
+      <workItem from="1640591491033" duration="446000" />
+      <workItem from="1640595580183" duration="7407000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1635541021388</created>
@@ -418,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640366231932</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1640468007327</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1640468007327</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

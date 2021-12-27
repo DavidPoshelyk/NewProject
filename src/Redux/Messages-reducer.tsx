@@ -9,10 +9,12 @@ let initialState = {data:[{id: 1, messages: ["I do not understand you", "hgyigyu
 const MessagesReducer = (state:messagesDataType = initialState, action:any):messagesDataType => {
     switch (action.type){
         case ADD_MESSAGE:
+
             let New = {
             id: 1,
             messages: [state.Newtextmessage, state.Newtextmessage],
             images: "https://s0.rbk.ru/v6_top_pics/media/img/1/83/756079611261831.jpg"}
+
             return {...state, data:[New,...state.data]}
 
 
