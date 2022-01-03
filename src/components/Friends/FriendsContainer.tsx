@@ -15,9 +15,6 @@ const mapDispatchToProps = (dispatch: any) => {
         clickFollow:(id:string)=>{dispatch(followAC(id))} ,
         clickUnfollow:(id:string)=> {dispatch(unfollowAC(id))},
         dataFriends:(array: any)=> {dispatch(dataFriendsAC(array))}
-        // AddFriends:(id: string)=> {
-        //     dispatch(addFriendsAC( , 'david',"hi" ))
-        //     }
 
 
     }

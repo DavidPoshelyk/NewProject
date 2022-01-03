@@ -1,26 +1,27 @@
 import React from "react";
 import s from './Friends.module.css'
 import axios from "axios";
+import  userImages from  "./../../images/9082227.png"
 
 
 class Friends extends React.Component<any, any>{
-    AddFriends = () => {
-        axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-            this.props.dataFriends(response.data.items)
 
-        })
+   componentDidMount() {
+       axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {this.props.dataFriends(response.data.items)})
+   }
+   //  AddFriends() {
+   //     axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {console.log(response.data.items)})
+   // }
 
-    }
 
-render() {
+    render() {
     return (
         <div>
-            <button onClick={() => this.AddFriends()}> add friends
-            </button>
+            {/*<button onClick={() => this.AddFriends()}> add friends</button>*/}
             {this.props.data.map((f: any) =>
                 <div className={s.friends}>
                     <div className={s.images}>
-                        <img src='https://pbs.twimg.com/media/E_boYMdXMAYTUmJ?format=jpg&name=large'/>
+                        <img src={userImages}/>
                         <div>
 
                             {f.followed ? <button onClick={() => {
@@ -34,11 +35,11 @@ render() {
                     <div className={s.info}>
                         <span className={s.fullName}>{f.name}</span>
                         <div className={s.location}>
-                            <div>{"f.location.city"}</div>
-                            <div>{"f.location.country"}</div>
+                            {/*<div>{"f.location.city"}</div>*/}
+                            {/*<div>{"f.location.country"}</div>*/}
 
                         </div>
-                        <span className={s.status}>{"f.status"}</span>
+                        {/*<span className={s.status}>{"f.status"}</span>*/}
 
 
                     </div>
