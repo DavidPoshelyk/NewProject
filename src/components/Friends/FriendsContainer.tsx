@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
-import {Friends} from "./Friends";
-import {followAC, unfollowAC} from "../../Redux/Friends-reducer";
+import { dataFriendsAC, followAC, unfollowAC} from "../../Redux/Friends-reducer";
+import Friends from "./Friends";
 
 
 const mapStateToProps = (state:any) => {
@@ -12,13 +12,12 @@ const mapStateToProps = (state:any) => {
 }
 const mapDispatchToProps = (dispatch: any) => {
     return{
-        clickFollow:(id:string)=>{
-            dispatch(followAC(id))
-        } ,
-        clickUnfollow:(id:string)=> {
-            dispatch(unfollowAC(id))
-            console.log(id)
-        }
+        clickFollow:(id:string)=>{dispatch(followAC(id))} ,
+        clickUnfollow:(id:string)=> {dispatch(unfollowAC(id))},
+        dataFriends:(array: any)=> {dispatch(dataFriendsAC(array))}
+        // AddFriends:(id: string)=> {
+        //     dispatch(addFriendsAC( , 'david',"hi" ))
+        //     }
 
 
     }
