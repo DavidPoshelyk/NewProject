@@ -6,19 +6,32 @@ import  userImages from  "./../../images/9082227.png"
 
 class Friends extends React.Component<any, any>{
 
+
    componentDidMount() {
-       axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {this.props.dataFriends(response.data.items)})
+       axios.get(`https://social-network.samuraijs.com/api/1.0/users`).then(response => {
+           console.log(response.data)
+           this.props.dataFriends(response.data)})
    }
-   //  AddFriends() {
-   //     axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {console.log(response.data.items)})
-   // }
+   page(m:number){
+       axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${m}&count=${this.props.data.count}`).then(response => {
+           this.props.dataFriends(response.data)});
+           // console.log(response.data);
+           this.props.dataPage(m)}
+
 
 
     render() {
-    return (
+        console.log(this.props.data.page)
+       let a = []
+        for (let i = 0; i <= this.props.data.page; i++){
+            a.push(i)
+        }
+        return (
         <div>
             {/*<button onClick={() => this.AddFriends()}> add friends</button>*/}
-            {this.props.data.map((f: any) =>
+            {a.map((m, index)=> <span key={index} onClick={()=> this.page(m)}>{m}</span>)}
+
+            {this.props.data.user.map((f: any) =>
                 <div className={s.friends}>
                     <div className={s.images}>
                         <img src={userImages}/>
