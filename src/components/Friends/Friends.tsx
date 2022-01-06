@@ -15,22 +15,22 @@ class Friends extends React.Component<any, any>{
    page(m:number){
        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${m}&count=${this.props.data.count}`).then(response => {
            this.props.dataFriends(response.data)});
-           // console.log(response.data);
+            console.log(m);
            this.props.dataPage(m)}
 
 
 
     render() {
         console.log(this.props.data.page)
-       let a = []
-        for (let i = 0; i <= this.props.data.page; i++){
+        console.log(this.props.data.value)
+        let a = []
+        for (let i = 1; i <= this.props.data.page ; i++){
             a.push(i)
         }
         return (
         <div>
-            {/*<button onClick={() => this.AddFriends()}> add friends</button>*/}
-            {a.map((m, index)=> <span key={index} onClick={()=> this.page(m)}>{m}</span>)}
 
+            {a.map((m, index)=> <span style={{backgroundColor:this.props.data.value === m ? "red":""}} key={index} onClick={()=> this.page(m)}>{m}</span>)}
             {this.props.data.user.map((f: any) =>
                 <div className={s.friends}>
                     <div className={s.images}>
