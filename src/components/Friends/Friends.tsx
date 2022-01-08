@@ -11,6 +11,7 @@ class Friends extends React.Component<any, any>{
         axios.get(`https://social-network.samuraijs.com/api/1.0/users`).then(response => {
             console.log("componentDidMount")
             this.props.dataFriends(response.data)
+            console.log(response.data)
         })
 
     }
@@ -50,7 +51,7 @@ class Friends extends React.Component<any, any>{
             {this.props.data.user.map((f: any) =>
                 <div className={s.friends}>
                     <div className={s.images}>
-                        <img src={userImages}/>
+                        {f.photos.small != null ? <img src={f.photos.small}/>: <img src={userImages}/>}
                         <div>
 
                             {f.followed ? <button onClick={() => {
