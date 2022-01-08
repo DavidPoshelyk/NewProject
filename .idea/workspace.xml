@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5ac17eb-3795-4fcd-af5e-410df4e4552e" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
+      <change afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Friends/Friends.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends/Friends.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Friends-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Users-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Redux.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Redux.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Friends/Friends.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Friends/Friends.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Friends/FriendsContainer.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +210,7 @@
       <workItem from="1640591491033" duration="446000" />
       <workItem from="1640595580183" duration="7701000" />
       <workItem from="1641200330923" duration="9553000" />
-      <workItem from="1641467514377" duration="13634000" />
+      <workItem from="1641467514377" duration="20330000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1635541021388</created>
@@ -472,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641635267333</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1641635751008</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1641635751008</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

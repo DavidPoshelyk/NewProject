@@ -3,7 +3,7 @@ import MessagesReducer from "./Messages-reducer";
 import PostsReducer from "./Posts-reducer";
 import SettingsReducer from "./Settings-reducer";
 import DialogsReducer from "./Dialogs-reducer";
-import  FriendsReducer  from "./Friends-reducer";
+import  UsersReducer  from "./Users-reducer";
 
 
 
@@ -12,7 +12,7 @@ let reducers = combineReducers({
     MessagesReducer:MessagesReducer,
     PostsReducer:PostsReducer,
     SettingsReducer:SettingsReducer,
-    FriendsReducer:FriendsReducer,
+    UsersReducer:UsersReducer,
     DialogsReducer:DialogsReducer
 })
 

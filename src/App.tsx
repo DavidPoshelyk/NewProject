@@ -8,7 +8,7 @@ import {Messages} from "./components/Messages/Messages";
 import {Settings} from "./components/Settings/Settings";
 
 import ProfileContainer from "./components/Contents/ProfileContainer";
-import { FriendsContainer } from './components/Friends/FriendsContainer';
+import { UsersContainer } from './components/Users/UsersContainer';
 import {MessagesContainer} from "./components/Messages/MessagesContainer";
 
 
@@ -25,7 +25,7 @@ function App() {
                 <div className='contents'>
                     <Route path='/contents' render={() => <ProfileContainer/>}/>
                     <Route path='/messages' render={() => <MessagesContainer/>}/>
-                    <Route path='/friends' render={() => <FriendsContainer/>}/>
+                    <Route path='/friends' render={() => <UsersContainer/>}/>
                     <Route path='/settings' render={() => <Settings/>}/>
                 </div>
             </div>
