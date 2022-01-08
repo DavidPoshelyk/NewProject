@@ -4,22 +4,21 @@ import React from "react";
 
 const initialState = {
     user: [],
-    totalCount: 400,
-    page: 0,
-    count: 10,
-    value:1
+    totalCount: 1,
+    page: 1,
+    count: 20,
+    error: null
 }
 
 
 
- const FriendsReducer = (state:any = initialState,  action:followACType|unfollowACType| dataFriendsACType|dataPageACType ) => {
+ const FriendsReducer = (state:any = initialState,  action:followACType|unfollowACType| dataFriendsACType|countUserACType|pageUserACType) => {
     switch (action.type) {
-        case "DATA-FRIENDS": {return  {...state, user: action.array.items, page:Math.ceil(state.totalCount/state.count ) }}
+        case "DATA-FRIENDS": {return  {...state, user: action.data.items, totalCount: action.data.totalCount, error: action.data.error}}
         case'FOLLOW' :{ return  state.map((m:any)=> m.id === action.id? {...m, followed:true}: m )}
         case'UNFOLLOW' :{ return state.map((m:any)=> m.id === action.id? {...m, followed:false}: m )}
-        // case 'ADD-FRIENDS': { let newFriends = {id:action.id, followed: false, fullName:action.fullName, status:action.status, location:{city:'Minsk', country: 'Belarus'}, images:'https://pbs.twimg.com/media/E_boYMdXMAYTUmJ?format=jpg&name=large'}
-        //     return [...state,newFriends  ] }
-        case "DATA-PAGE": {return {...state, page: action.value }}
+        case "COUNT-USER": {return {...state, count: action.count}}
+        case "PAGE-USER": {return {...state, page: action.page}}
 
 
 default: return state
@@ -30,13 +29,15 @@ default: return state
 
 type followACType = ReturnType<typeof followAC >
 type unfollowACType = ReturnType<typeof unfollowAC >
-// type addFriendsACType = ReturnType<typeof addFriendsAC >
 type dataFriendsACType = ReturnType<typeof dataFriendsAC >
-type dataPageACType = ReturnType<typeof dataPageAC >
+type countUserACType = ReturnType<typeof countUserAC >
+type pageUserACType = ReturnType<typeof pageUserAC >
 export const followAC = (id: string) => {return { type: 'FOLLOW',id}as const}
 export const unfollowAC = (id: string) => {return {type: 'UNFOLLOW', id} as const}
-// export const addFriendsAC = (id: string, fullName: string,status: string) => {return {type: 'ADD-FRIENDS', id, fullName,status } as const}
-export const dataFriendsAC = (array: any) => {return {type: "DATA-FRIENDS", array}as const}
-export const dataPageAC = (value: any) => {return {type: "DATA-PAGE", value}as const}
+export const dataFriendsAC = (data: any) => {return {type: "DATA-FRIENDS", data}as const}
+export const countUserAC = (count: any) => {return {type: "COUNT-USER", count}as const}
+export const pageUserAC = (page: any) => {return {type: "PAGE-USER", page}as const}
+
+
 
 export default FriendsReducer

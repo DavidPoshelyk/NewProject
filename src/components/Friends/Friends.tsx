@@ -7,30 +7,46 @@ import  userImages from  "./../../images/9082227.png"
 class Friends extends React.Component<any, any>{
 
 
-   componentDidMount() {
-       axios.get(`https://social-network.samuraijs.com/api/1.0/users`).then(response => {
-           console.log(response.data)
-           this.props.dataFriends(response.data)})
-   }
-   page(m:number){
-       axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${m}&count=${this.props.data.count}`).then(response => {
-           this.props.dataFriends(response.data)});
-            console.log(m);
-           this.props.dataPage(m)}
+    componentDidMount() {
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users`).then(response => {
+            console.log("componentDidMount")
+            this.props.dataFriends(response.data)
+        })
+
+    }
+
+    moreUser() {
+        let count
+        let page
+        if (this.props.data.count  <= 80){
+            this.props.countUsers(this.props.data.count + 20)
+            count = this.props.data.count + 20
+        } else {
+            this.props.countUsers(20)
+            page = this.props.data.page + 1
+            this.props.pageUser(page)
+            console.log(page)
+            console.log(page)}
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${count}&page=${page}`).then(response => {
+            console.log("moreUser")
+            this.props.dataFriends(response.data)
+        })
+        console.log(this.props.data.count)
+        console.log(this.props.data.page)
+            // this.props.countUsers(this.props.data.count + 10)
+
+
+
+    }
+
 
 
 
     render() {
-        console.log(this.props.data.page)
-        console.log(this.props.data.value)
-        let a = []
-        for (let i = 1; i <= this.props.data.page ; i++){
-            a.push(i)
-        }
+
         return (
         <div>
 
-            {a.map((m, index)=> <span style={{backgroundColor:this.props.data.value === m ? "red":""}} key={index} onClick={()=> this.page(m)}>{m}</span>)}
             {this.props.data.user.map((f: any) =>
                 <div className={s.friends}>
                     <div className={s.images}>
@@ -59,6 +75,10 @@ class Friends extends React.Component<any, any>{
                 </div>
             )
             }
+            <div style={{textAlign: "center"}}>
+                <button style={{width:"150px", height:'50px'}}  className={s.button} onClick={()=>this.moreUser()}> + More Users </button>
+            </div>
+
         </div>
     )
 
