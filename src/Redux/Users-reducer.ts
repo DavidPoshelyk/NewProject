@@ -23,16 +23,16 @@ default: return state
     }
 }
 
-type followACType = ReturnType<typeof followAC >
-type unfollowACType = ReturnType<typeof unfollowAC >
-type dataUsersACType = ReturnType<typeof dataUsersAC>
-type pageUserACType = ReturnType<typeof pageUserAC >
-type isFetchingUserACType = ReturnType<typeof isFetchingUserAC >
-export const followAC = (id: string) => {return { type: 'FOLLOW',id}as const}
-export const unfollowAC = (id: string) => {return {type: 'UNFOLLOW', id} as const}
-export const dataUsersAC = (data: any) => {return {type: "DATA-USERS", data}as const}
-export const pageUserAC = (page: any) => {return {type: "PAGE-USER", page}as const}
-export const isFetchingUserAC = (isFetching: any) => {return {type: "FETCHING-USER", isFetching}as const}
+type followACType = ReturnType<typeof clickFollow >
+type unfollowACType = ReturnType<typeof clickUnfollow >
+type dataUsersACType = ReturnType<typeof dataUsers>
+type pageUserACType = ReturnType<typeof pageUser >
+type isFetchingUserACType = ReturnType<typeof isFetching >
+export const clickFollow = (id: string) => {return { type: 'FOLLOW',id}as const}
+export const clickUnfollow = (id: string) => {return {type: 'UNFOLLOW', id} as const}
+export const dataUsers = (data: any) => {return {type: "DATA-USERS", data}as const}
+export const pageUser = (page: any) => {return {type: "PAGE-USER", page}as const}
+export const isFetching = (isFetching: any) => {return {type: "FETCHING-USER", isFetching}as const}
 
 
 
