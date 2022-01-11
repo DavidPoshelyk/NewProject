@@ -10,7 +10,6 @@ class UsersAPIComponent extends React.Component<any, any> {
     componentDidMount() {
         this.props.isFetching(true)
         axios.get(`https://social-network.samuraijs.com/api/1.0/users`).then(response => {
-            console.log("componentDidMount")
             this.props.dataUsers(response.data)
             this.props.isFetching(false)
         })

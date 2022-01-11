@@ -1,19 +1,17 @@
 import {combineReducers, createStore} from "redux";
 import MessagesReducer from "./Messages-reducer";
-import PostsReducer from "./Posts-reducer";
+import ProfileReducer from "./Profile-reducer";
 import SettingsReducer from "./Settings-reducer";
 import DialogsReducer from "./Dialogs-reducer";
 import  UsersReducer  from "./Users-reducer";
 
 
-
-
 let reducers = combineReducers({
-    MessagesReducer:MessagesReducer,
-    PostsReducer:PostsReducer,
-    SettingsReducer:SettingsReducer,
-    UsersReducer:UsersReducer,
-    DialogsReducer:DialogsReducer
+    MessagesReducer,
+    ProfileReducer,
+    SettingsReducer,
+    UsersReducer,
+    DialogsReducer
 })
 
 

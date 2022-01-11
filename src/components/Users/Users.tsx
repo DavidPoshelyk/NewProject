@@ -2,14 +2,21 @@ import React from "react";
 import s from './Users.module.css'
 import userImages from './../../images/9082227.png'
 import Ring from "../../Preloader/Ring";
+import { NavLink } from "react-router-dom";
 
 
 export const Users = (props: any) => {
 
     const users = props.data.user.map((f: any) =>
         <div className={s.friends}>
+
             <div className={s.images}>
-                {f.photos.small != null ? <img src={f.photos.small}/> : <img src={userImages}/>}
+                <NavLink to={'/profile/'+ f.id}>
+                {f.photos.small != null ?
+                    <img src={f.photos.small}/>
+                    :
+                    <img src={userImages}/>}
+                </NavLink>
                 <div>
 
                     {f.followed ? <button onClick={() => {

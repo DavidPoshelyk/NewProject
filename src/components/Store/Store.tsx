@@ -1,5 +1,5 @@
 import React from 'react';
-import PostsReducer from "../../Redux/Posts-reducer";
+import ProfileReducer from "../../Redux/Profile-reducer";
 import MessagesReducer from "../../Redux/Messages-reducer"
 import SettingsReducer from "../../Redux/Settings-reducer";
 
@@ -70,7 +70,7 @@ export let store:StoreType = {
 
     dispatch(action:any){
 
-        this._state.DataPosts = PostsReducer(this._state.DataPosts, action)
+        this._state.DataPosts = ProfileReducer(this._state.DataPosts, action)
         this._state.MessagesData = MessagesReducer(this._state.MessagesData, action)
         this._state.GeneralSettings = SettingsReducer( this._state.GeneralSettings, action)
 

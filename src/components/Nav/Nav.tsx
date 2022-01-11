@@ -5,7 +5,7 @@ import s from "./Nav.module.css"
 export function Nav() {
     return (<div className={s.nav}>
             <div>
-                <li><NavLink activeClassName={s.active} to='/contents'> Profile</NavLink></li>
+                <li><NavLink activeClassName={s.active} to='/profile'> Profile</NavLink></li>
             </div>
             <div>
                 <li><NavLink activeClassName={s.active} to='/messages'> Messages</NavLink></li>
