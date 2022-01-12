@@ -1,28 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
+import s from './Contents.module.css'
+import userPhoto from './../../images/9082227.png'
 
 
-
-
-export const ProfileInfo = (props:any) => {
+export const ProfileInfo = (props: any) => {
+    const [MouseEnter, setMouseEnter] = useState<boolean>(false)
+    const [valueAccordion, setValueAccordion] = useState<boolean>(false)
     console.log(props)
     return (
-        <div>
-            <div>
-            <img src={props.photos.small}/>
-            </div>
-            <div>
-              <div> Name: <b>{props.fullName}</b></div>
-                <div>Status:{props.aboutMe}</div>
-                <div>
-                    <h3> contacts </h3>
-                    <li>{props.contacts.github}</li>
-                    <li>{props.contacts.website}</li>
-                    <li>{props.contacts.facebook}</li>
-                    <li>{props.contacts.vk}</li>
+        <div className={s.profileInfo}>
+            <img className={s.userPhoto} src={props.photos.large === null?userPhoto:props.photos.large}/>
+            <div className={s.infoUser}>
+                <div className={s.fullNameUser}>{props.fullName}</div>
+                <div className={s.statusUser}>{props.lookingForAJobDescription}</div>
+                <div onMouseLeave={() => setMouseEnter(false)}
+                     onMouseEnter={() => setMouseEnter(true)}
+                     onClick={() => setValueAccordion(!valueAccordion)}
+                     style={{backgroundColor: MouseEnter ? "#5181b8" : ''}}
+                     className={s.spanInfo}>
+                    {valueAccordion ?'Скрыть подробную информацию': 'Показать подробную информацию'}
                 </div>
+                {valueAccordion &&
+                <div className={s.accordion}>
+                    {/*<ul> Желание: {props.contacts.lookingForAJobDescription}</ul>*/}
+                    <ul> Github: {props.contacts.github}</ul>
+                    <ul> Website: {props.contacts.website}</ul>
+                    <ul> Facebook: {props.contacts.facebook}</ul>
+                    <ul> Vk: {props.contacts.vk}</ul>
+                </div>
+                }
+
             </div>
 
 
-    </div>
+        </div>
     )
 }

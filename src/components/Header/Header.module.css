@@ -1,8 +1,9 @@
 .header {
-    background-color: #110303;
+    /*border-radius: 10px;*/
+    background-color: #2ea2cc;
     grid-area: header;
     padding: 10px;
-    border: 4px solid #2ea2cc;
+    /*border: 4px solid #2ea2cc;*/
 }
 
 .imagesH {

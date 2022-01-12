@@ -21,7 +21,7 @@ function App() {
                 <Header/>
                 <Nav/>
                 <div className='contents'>
-                    <Route path='/profile' render={() => <ContainerProfile/>}/>
+                    <Route path='/profile/:userId?' render={() => <ContainerProfile/>}/>
                     <Route path='/messages' render={() => <MessagesContainer/>}/>
                     <Route path='/friends' render={() => <UsersContainer/>}/>
                     <Route path='/settings' render={() => <Settings/>}/>
