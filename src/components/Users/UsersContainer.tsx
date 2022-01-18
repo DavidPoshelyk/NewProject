@@ -9,7 +9,7 @@ class UsersAPIComponent extends React.Component<any, any> {
 
     componentDidMount() {
         this.props.isFetching(true)
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users`).then(response => {
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users`,{withCredentials: true}).then(response => {
             this.props.dataUsers(response.data)
             this.props.isFetching(false)
         })
@@ -19,7 +19,7 @@ class UsersAPIComponent extends React.Component<any, any> {
     moreUsers = (page: number) => {
         // this.props.isFetching(true)
         this.props.pageUser(page)
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=20`).then(response => {
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=20`,{withCredentials: true}).then(response => {
             this.props.dataUsers(response.data)
             // this.props.isFetching(false)
         })

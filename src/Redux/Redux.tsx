@@ -4,6 +4,7 @@ import ProfileReducer from "./Profile-reducer";
 import SettingsReducer from "./Settings-reducer";
 import DialogsReducer from "./Dialogs-reducer";
 import  UsersReducer  from "./Users-reducer";
+import AuthReducer from "./auth-reducer";
 
 
 let reducers = combineReducers({
@@ -11,11 +12,15 @@ let reducers = combineReducers({
     ProfileReducer,
     SettingsReducer,
     UsersReducer,
-    DialogsReducer
+    DialogsReducer,
+    AuthReducer
 })
 
 
 let store = createStore(reducers);
 
 
+
 export default store
+// @ts-ignore
+window.store = store

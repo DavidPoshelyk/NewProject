@@ -12,7 +12,7 @@ const initialState = {
 
  const UsersReducer = (state:any = initialState, action:followACType|unfollowACType| dataUsersACType|pageUserACType|isFetchingUserACType) => {
     switch (action.type) {
-        case "DATA-USERS": {return  {...state, user: state.user.concat(action.data.items), totalCount: action.data.totalCount, error: action.data.error}}
+        case "DATA-USERS": {return  {...state, user:[...state.user,...action.data.items ] , totalCount: action.data.totalCount, error: action.data.error}}
         case'FOLLOW' :{return  {...state, user:state.user.map((m:any)=> m.id === action.id? {...m, followed:true}: m ) } }
         case'UNFOLLOW' :{return {...state, user:state.user.map((m:any)=> m.id === action.id? {...m, followed:false}: m ) }}
         case "PAGE-USER": {return {...state, page: action.page}}

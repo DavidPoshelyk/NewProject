@@ -8,6 +8,7 @@ import {Settings} from "./components/Settings/Settings";
 import {UsersContainer} from './components/Users/UsersContainer';
 import {MessagesContainer} from "./components/Messages/MessagesContainer";
 import {ContainerProfile} from "./components/Profile/ContainerProfile";
+import {HeaderContainer} from "./components/Header/HeaderContainer";
 
 
 
@@ -18,7 +19,7 @@ function App() {
     return (
         <BrowserRouter>
             <div className="grid">
-                <Header/>
+                <HeaderContainer/>
                 <Nav/>
                 <div className='contents'>
                     <Route path='/profile/:userId?' render={() => <ContainerProfile/>}/>
