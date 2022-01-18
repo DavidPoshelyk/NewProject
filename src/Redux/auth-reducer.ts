@@ -11,7 +11,7 @@ const AuthReducer = (state = initialState, action:authDataACType) => {
 
 switch (action.type) {
     case "AUTH-DATA": {
-        return {...state, ...action.data, isAuth:false }}
+        return {...state, ...action.data, isAuth:true }}
         default:return state
 }
 };
