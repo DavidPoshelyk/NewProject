@@ -5,7 +5,8 @@ const initialState = {
     page: 1,
     count: 20,
     error: null,
-    isFetching:false
+    isFetching:false,
+    followProgress: []
 }
 
 
