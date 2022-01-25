@@ -4,10 +4,9 @@ import userImages from './../../images/9082227.png'
 import Ring from "../../Preloader/Ring";
 import {NavLink} from "react-router-dom";
 
-import {UserAPI} from "../../api/UserAPI";
-
 
 export const Users = (props: any) => {
+
 
     const users = props.data.user.map((f: any) =>
         <div className={s.friends}>
@@ -20,20 +19,16 @@ export const Users = (props: any) => {
                         <img src={userImages}/>}
                 </NavLink>
                 <div>
-                    {f.followed ? <button onClick={() => {
-                        UserAPI.UnfollowUsers(f.id).then(code => {
-                            if (code === 0) {
-                                props.clickUnfollow(f.id)
-                            }
-                        })
-
-                    }} className={s.button}>Unfollow</button> : <button onClick={() => {
-                        UserAPI.FollowUsers(f.id).then(code => {
-                            if (code === 0) {
-                                props.clickFollow(f.id)
-                            }
-                        })
-                    }} className={s.button}>Follow</button>}
+                    {f.followed ?
+                        <button
+                                disabled={props.data.followProgress.some((s: number) => s === f.id)}
+                                onClick={() => {props.clickFollowThunk(f.id)}}
+                                className={s.button}>Unfollow</button>
+                        :
+                        <button
+                            disabled={props.data.followProgress.some((s: number) => s === f.id)}
+                            onClick={() => {props.clickUnfollowThunk(f.id)}}
+                            className={s.button}>Follow</button>}
 
                 </div>
             </div>

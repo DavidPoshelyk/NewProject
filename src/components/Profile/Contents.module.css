@@ -35,3 +35,15 @@
     background-color:#2b72c4 ;
     border-radius: 4px;
 }
+.preloader{
+    display: grid;
+    margin-top: 100px;
+    justify-content: center;
+    vertical-align: center;
+    align-content: center;
+
+
+
+
+
+}
