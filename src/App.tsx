@@ -4,11 +4,11 @@ import "./components/Header/Header";
 import {Nav} from "./components/Nav/Nav";
 import {BrowserRouter, Route} from 'react-router-dom';
 import {Settings} from "./components/Settings/Settings";
-import {UsersContainer} from './components/Users/UsersContainer';
+import UsersAPIComponent from './components/Users/UsersContainer';
 import {MessagesContainer} from "./components/Messages/MessagesContainer";
-import {ContainerProfile} from "./components/Profile/ContainerProfile";
 import {HeaderContainer} from "./components/Header/HeaderContainer";
 import Login from "./components/Login/Login";
+import  {ContainerProfile} from "./components/Profile/ContainerProfile";
 
 
 
@@ -22,9 +22,10 @@ function App() {
                 <HeaderContainer/>
                 <Nav/>
                 <div className='contents'>
+
                     <Route path='/profile/:userId?' render={() => <ContainerProfile/>}/>
                     <Route path='/messages' render={() => <MessagesContainer/>}/>
-                    <Route path='/friends' render={() => <UsersContainer/>}/>
+                    <Route path='/friends' render={() => <UsersAPIComponent/>}/>
                     <Route path='/settings' render={() => <Settings/>}/>
                     <Route path='/login' render={() => <Login/>}/>
                 </div>

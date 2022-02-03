@@ -4,6 +4,7 @@ import Profile from "./Profile";
 import  {profilePage} from "../../Redux/Profile-reducer";
 import { withRouter} from "react-router-dom";
 import { withAuthRedirect } from "../hoc/withAuthHoc";
+import {compose} from "redux";
 
 
 

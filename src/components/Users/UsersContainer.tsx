@@ -4,6 +4,7 @@ import React from "react";
 import {Users} from "./Users";
 import {withAuthRedirect} from "../hoc/withAuthHoc";
 import {Messages} from "../Messages/Messages";
+import {compose} from "redux";
 
 
 class UsersAPIComponent extends React.Component<any, any> {
@@ -31,9 +32,11 @@ const mapStateToProps = (state: any) => {
     }
 }
 
-export const UsersContainer = connect(mapStateToProps, {
+export default compose(connect(mapStateToProps, {
     clickFollowThunk,
     clickUnfollowThunk,
     getUserThunk,
     moreUsers,
-})(withAuthRedirect(UsersAPIComponent))
+}))(withAuthRedirect(UsersAPIComponent))
+
+
