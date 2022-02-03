@@ -3,6 +3,7 @@ import s from './Contents.module.css'
 import userPhoto from './../../images/9082227.png'
 import Ring from "../../Preloader/Ring";
 import {Redirect} from "react-router-dom";
+import {ProfileStatus} from "./ProfileStatus";
 
 
 export const ProfileInfo = (props: any) => {
@@ -18,6 +19,7 @@ export const ProfileInfo = (props: any) => {
                     <div className={s.infoUser}>
                         <div className={s.fullNameUser}>{props.fullName}</div>
                         <div className={s.statusUser}>{props.lookingForAJobDescription}</div>
+                        <ProfileStatus/>
                         <div onMouseLeave={() => setMouseEnter(false)}
                              onMouseEnter={() => setMouseEnter(true)}
                              onClick={() => setValueAccordion(!valueAccordion)}

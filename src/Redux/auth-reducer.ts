@@ -5,7 +5,7 @@ const initialState = {
      id:null,
     login:null,
     email:null,
-    isAuth:false
+    isAuth:true
 }
 
 const AuthReducer = (state = initialState, action:authDataACType) => {
@@ -13,7 +13,7 @@ const AuthReducer = (state = initialState, action:authDataACType) => {
 switch (action.type) {
     case "AUTH-DATA": {
         console.log(action.data)
-        return {...state, ...action.data, isAuth:true }}
+        return {...state, ...action.data }}
         default:return state
 }
 };
