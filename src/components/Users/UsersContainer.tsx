@@ -2,6 +2,8 @@ import {connect} from "react-redux";
 import {clickFollowThunk, clickUnfollowThunk, getUserThunk, moreUsers} from "../../Redux/Users-reducer";
 import React from "react";
 import {Users} from "./Users";
+import {withAuthRedirect} from "../hoc/withAuthHoc";
+import {Messages} from "../Messages/Messages";
 
 
 class UsersAPIComponent extends React.Component<any, any> {
@@ -34,4 +36,4 @@ export const UsersContainer = connect(mapStateToProps, {
     clickUnfollowThunk,
     getUserThunk,
     moreUsers,
-})(UsersAPIComponent)
+})(withAuthRedirect(UsersAPIComponent))

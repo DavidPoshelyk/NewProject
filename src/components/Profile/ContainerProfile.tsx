@@ -2,10 +2,8 @@ import React from "react";
 import {connect} from "react-redux";
 import Profile from "./Profile";
 import  {profilePage} from "../../Redux/Profile-reducer";
-import {withRouter} from "react-router-dom";
-
-
-
+import { withRouter} from "react-router-dom";
+import { withAuthRedirect } from "../hoc/withAuthHoc";
 
 
 
@@ -26,12 +24,22 @@ class ContainerProfileAPI extends React.Component<any, any>{
     }
 
 }
+ // let AuthRedirectComponent = (props:any) => {
+ //     if(!props.isAuth ) return <Redirect to='/login'/>
+ //    return <ContainerProfileAPI {...props}/>
+ //
+ // }
 
 const mapStateToProps = (state: any) => {
     return {
-        data: state.ProfileReducer
+        data: state.ProfileReducer,
+
     }
 }
 
- let ContainerProfileAPIWithRouter = withRouter(ContainerProfileAPI)
+let AuthRedirectComponent = withAuthRedirect(ContainerProfileAPI)
+
+
+
+let ContainerProfileAPIWithRouter = withRouter(AuthRedirectComponent)
 export const  ContainerProfile = connect(mapStateToProps, {profilePage})(ContainerProfileAPIWithRouter)

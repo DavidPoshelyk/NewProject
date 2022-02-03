@@ -2,23 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5ac17eb-3795-4fcd-af5e-410df4e4552e" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
-      <change afterPath="$PROJECT_DIR$/src/api/AuthAPI.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/ProfileAPI.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Login/Login.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/hoc/withAuthHoc.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Profile-reducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Profile-reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Redux.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Redux.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Users-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Users-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/auth-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/auth-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/UserAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/UserAPI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Messages/MessagesContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages/MessagesContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/ContainerProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ContainerProfile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Contents.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Contents.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +21,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="tsconfig.json" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -56,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TodoList/src/AppWithRedux.tsx" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -233,7 +226,10 @@
       <workItem from="1642367572922" duration="1224000" />
       <workItem from="1642501624511" duration="10745000" />
       <workItem from="1642788646543" duration="1699000" />
-      <workItem from="1643113102539" duration="8219000" />
+      <workItem from="1643113102539" duration="8908000" />
+      <workItem from="1643194291446" duration="619000" />
+      <workItem from="1643807431081" duration="609000" />
+      <workItem from="1643883177911" duration="6649000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1635541021388</created>
@@ -564,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642604428339</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1643121441800</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1643121441800</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -2,12 +2,14 @@ import React, {useState} from "react";
 import s from './Contents.module.css'
 import userPhoto from './../../images/9082227.png'
 import Ring from "../../Preloader/Ring";
+import {Redirect} from "react-router-dom";
 
 
 export const ProfileInfo = (props: any) => {
+    console.log(props)
     const [MouseEnter, setMouseEnter] = useState<boolean>(false)
     const [valueAccordion, setValueAccordion] = useState<boolean>(false)
-    console.log(props.isFetching)
+
     return (
         <div>
             {props.isFetching ? <div className={s.preloader}><Ring/></div> :
