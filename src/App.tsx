@@ -7,8 +7,9 @@ import {Settings} from "./components/Settings/Settings";
 import UsersAPIComponent from './components/Users/UsersContainer';
 import {MessagesContainer} from "./components/Messages/MessagesContainer";
 import {HeaderContainer} from "./components/Header/HeaderContainer";
-import Login from "./components/Login/Login";
 import  {ContainerProfile} from "./components/Profile/ContainerProfile";
+import {LoginReduxForm} from "./components/Login/Login";
+
 
 
 
@@ -22,12 +23,11 @@ function App() {
                 <HeaderContainer/>
                 <Nav/>
                 <div className='contents'>
-
                     <Route path='/profile/:userId?' render={() => <ContainerProfile/>}/>
                     <Route path='/messages' render={() => <MessagesContainer/>}/>
                     <Route path='/friends' render={() => <UsersAPIComponent/>}/>
                     <Route path='/settings' render={() => <Settings/>}/>
-                    <Route path='/login' render={() => <Login/>}/>
+                    <Route path='/login' render={() => <LoginReduxForm />}/>
                 </div>
             </div>
         </BrowserRouter>
