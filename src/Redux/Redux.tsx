@@ -5,7 +5,8 @@ import SettingsReducer from "./Settings-reducer";
 import DialogsReducer from "./Dialogs-reducer";
 import  UsersReducer  from "./Users-reducer";
 import AuthReducer from "./auth-reducer";
-import thunkMiddleware from "redux-thunk"
+import thunkMiddleware from "redux-thunk";
+import { reducer as formReducer } from 'redux-form'
 
 
 let reducers = combineReducers({
@@ -14,7 +15,8 @@ let reducers = combineReducers({
     SettingsReducer,
     UsersReducer,
     DialogsReducer,
-    AuthReducer
+    AuthReducer,
+    form:formReducer
 })
 
 

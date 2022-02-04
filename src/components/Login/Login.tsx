@@ -1,12 +1,18 @@
 import React from 'react';
-import s from './Login.module.css'
+import  {Field, reduxForm} from "redux-form";
+
 
 const Login = () => {
     return (
-        <div className={s.title}>
-            <h1 >Login</h1>
-            <input type='text'/>
-            <input type='text'/>
+        <div style={{border:'1px solid'}}>
+            <h1>Login</h1>
+            <form>
+                <div>
+                    <Field placeholder='login' componet='input' name='login'/>
+                </div>
+                <div><Field placeholder='password' component='input' name='password'/></div>
+               <div><Field type='checkbox' component='input' name='checkbox'/></div>
+            </form>
             <div>
                 <button>Sing In</button>
 
@@ -15,4 +21,5 @@ const Login = () => {
     );
 };
 
-export default Login;
+
+export default reduxForm({form:'login'})(Login)
