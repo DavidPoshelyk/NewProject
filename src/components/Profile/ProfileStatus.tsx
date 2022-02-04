@@ -19,7 +19,9 @@ export class ProfileStatus extends React.Component<any, any> {
         this.setState({
             editMode: false
         })
-        this.props.updateStatusThunk(this.state.statusText)
+        if(this.state.statusText.length > 5 ) {
+            this.props.updateStatusThunk(this.state.statusText)
+        }
     }
     inputText = (e: ChangeEvent<HTMLInputElement>) => {
         this.setState({
@@ -37,7 +39,7 @@ export class ProfileStatus extends React.Component<any, any> {
                 </div>}
                 {!this.state.editMode &&
                 <div onDoubleClick={this.activateEditMode}>
-                    <span>{this.props.status}</span>
+                    <span>{this.props.status || '-------'}</span>
                 </div>}
             </div>
 
