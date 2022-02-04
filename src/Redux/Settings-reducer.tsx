@@ -1,5 +1,5 @@
 import React from 'react';
-import {GeneralSettingsType} from "../components/Store/Store";
+
 
 const UPDATE_NEW_TEXT_GENERAL_MYAGE = 'UPDATE_NEW_TEXT_GENERAL_MYAGE'
 const UPDATE_NEW_TEXT_GENERAL_MARRIED = 'UPDATE_NEW_TEXT_GENERAL_MARRIED'
@@ -14,7 +14,7 @@ let initialSettings = {
     education:{data:'', isDone:false, NewTextGeneralEducation: ''},
 }
 
-const SettingsReducer = (state:GeneralSettingsType = initialSettings, action:any) => {
+const SettingsReducer = (state:any = initialSettings, action:any) => {
     switch (action.type){
         case UPDATE_NEW_TEXT_GENERAL_MYAGE:   state.myAge.NewTextGeneralMyage = action.textMyage; return state
         case UPDATE_NEW_TEXT_GENERAL_MARRIED:  state.married.NewTextGeneralMarried = action.textMarried; return state

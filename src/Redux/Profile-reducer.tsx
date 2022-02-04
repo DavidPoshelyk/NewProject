@@ -1,12 +1,34 @@
 import React from 'react';
 import {ProfileAPI} from "../api/ProfileAPI";
-
-
-
-const ADD_POST = 'ADD-POST'
-const UPDATE_NEW_TEXT_POST = 'UPDATE-NEW-TEXT-POST'
-const DATA_PROFILE = 'DATA_PROFILE'
+const DATA_PROFILE = 'DATA-PROFILE'
 const IS_FETCHING = 'IS-FETCHING'
+const SET_STATUS = 'SET-STATUS'
+//const UPDATE_STATUS = 'UPDATE-STATUS'
+
+
+type initialStateType ={
+    aboutMe:string,
+    contacts:{
+        facebook: string,
+        github: string,
+        instagram: string,
+        mainLink: string,
+        twitter: string,
+        vk: string,
+        website: string,
+        youtube: string,
+    },
+    fullName:string,
+    lookingForAJobDescription:string,
+    photos:{
+        large:string,
+        small:string,
+
+    },
+    isFetching:boolean,
+    status:string
+
+}
 
 let initialState = {
     aboutMe:'',
@@ -28,41 +50,61 @@ let initialState = {
 
     },
     isFetching:false,
+    status:''
     // Newtextpost:''
 }
 
-const ProfileReducer = (state:any = initialState, action:any) => {
+ export  const ProfileReducer = (state:initialStateType = initialState, action:comboTypeAction) => {
     switch (action.type) {
-        case ADD_POST:
-            let New = {item: true, like: 0, info: state.Newtextpost}
-            return {...state, data:[New,...state.data]}
-        case UPDATE_NEW_TEXT_POST:
-            return {...state, Newtextpost:action.NewPost}
         case DATA_PROFILE: {
-            return action.data
+            return {...state, ...action.data}
         }
         case IS_FETCHING: {
             return {...state,isFetching:action.isFetching }
+        }
+        case SET_STATUS:{
+            return {...state, status:action.status}
         }
         default: return  state
     }
 
 }
 
-export default ProfileReducer
 
-export const AddPostActionCreator = () => ({type:ADD_POST})
-export const UpdateNewTextPostActionCreator = (text:any)=>({type: UPDATE_NEW_TEXT_POST, NewPost: text})
-const dataProfile = (data:any)=>({type: DATA_PROFILE, data})
-const isFetchingAC = (isFetching:any)=>({type: IS_FETCHING, isFetching})
+type comboTypeAction = setStatusType|isFetchingType|dataProfileType
+type setStatusType = ReturnType<typeof setStatus>
+type isFetchingType = ReturnType<typeof isFetching>
+type dataProfileType = ReturnType<typeof dataProfile>
+const dataProfile = (data:any)=>({type: DATA_PROFILE, data} as const)
+const isFetching = (isFetching:boolean)=>({type: IS_FETCHING, isFetching} as const)
+const setStatus = (status:string) => ({type:SET_STATUS, status} as const)
+
 
 
 export const  profilePage = (userId:number)=> {
     return (dispatch:any)=>{
-        dispatch(isFetchingAC(true))
+        dispatch(isFetching(true))
         ProfileAPI.profilePage(userId).then(response => {
-            dispatch(isFetchingAC(false))
+            dispatch(isFetching(false))
            dispatch(dataProfile(response.data))
         })
     }
 }
+export const  getStatusThunk = (userId:string)=> {
+    return (dispatch:any)=>{
+        ProfileAPI.getStatus(userId).then(response => {
+            dispatch(setStatus(response.data))
+        })
+    }
+}
+export const  updateStatusThunk = (status:string)=> {
+    return (dispatch:any)=>{
+        ProfileAPI.updateStatus(status).then(response => {
+            if(response.data.resultCode === 0){
+                dispatch(setStatus(status))
+            }
+
+        })
+    }
+}
+export  default  ProfileReducer

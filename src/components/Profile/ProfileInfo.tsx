@@ -7,7 +7,6 @@ import {ProfileStatus} from "./ProfileStatus";
 
 
 export const ProfileInfo = (props: any) => {
-    console.log(props)
     const [MouseEnter, setMouseEnter] = useState<boolean>(false)
     const [valueAccordion, setValueAccordion] = useState<boolean>(false)
 
@@ -18,8 +17,8 @@ export const ProfileInfo = (props: any) => {
                     <img className={s.userPhoto} src={props.photos.large === null ? userPhoto : props.photos.large}/>
                     <div className={s.infoUser}>
                         <div className={s.fullNameUser}>{props.fullName}</div>
+                       <b><ProfileStatus status={props.status} updateStatusThunk={props.updateStatusThunk}/></b>
                         <div className={s.statusUser}>{props.lookingForAJobDescription}</div>
-                        <ProfileStatus/>
                         <div onMouseLeave={() => setMouseEnter(false)}
                              onMouseEnter={() => setMouseEnter(true)}
                              onClick={() => setValueAccordion(!valueAccordion)}

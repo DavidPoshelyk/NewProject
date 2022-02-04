@@ -1,10 +1,9 @@
 import React from "react";
 import {connect} from "react-redux";
 import Profile from "./Profile";
-import  {profilePage} from "../../Redux/Profile-reducer";
+import {getStatusThunk, profilePage, updateStatusThunk} from "../../Redux/Profile-reducer";
 import { withRouter} from "react-router-dom";
 import { withAuthRedirect } from "../hoc/withAuthHoc";
-import {compose} from "redux";
 
 
 
@@ -17,11 +16,13 @@ class ContainerProfileAPI extends React.Component<any, any>{
                 userId = 21625
             }
             this.props.profilePage(userId)
+            this.props.getStatusThunk(userId)
+
         }
 
 
     render() {
-            return <Profile {...this.props}/>
+            return <Profile {...this.props} status={this.props.data.status} updateStatusThunk={this.props.updateStatusThunk}/>
     }
 
 }
@@ -34,7 +35,6 @@ class ContainerProfileAPI extends React.Component<any, any>{
 const mapStateToProps = (state: any) => {
     return {
         data: state.ProfileReducer,
-
     }
 }
 
@@ -43,4 +43,8 @@ let AuthRedirectComponent = withAuthRedirect(ContainerProfileAPI)
 
 
 let ContainerProfileAPIWithRouter = withRouter(AuthRedirectComponent)
-export const  ContainerProfile = connect(mapStateToProps, {profilePage})(ContainerProfileAPIWithRouter)
+export const  ContainerProfile = connect(mapStateToProps, {
+    profilePage,
+    updateStatusThunk,
+    getStatusThunk
+})(ContainerProfileAPIWithRouter)
