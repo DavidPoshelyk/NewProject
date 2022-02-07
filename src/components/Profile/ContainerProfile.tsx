@@ -13,7 +13,7 @@ class ContainerProfileAPI extends React.Component<any, any>{
         componentDidMount() {
             let userId = this.props.match.params.userId
             if(!userId){
-                userId = 21625
+                userId = this.props.authId
             }
             this.props.profilePage(userId)
             this.props.getStatusThunk(userId)
@@ -35,6 +35,7 @@ class ContainerProfileAPI extends React.Component<any, any>{
 const mapStateToProps = (state: any) => {
     return {
         data: state.ProfileReducer,
+        authId: state.AuthReducer.id
     }
 }
 
