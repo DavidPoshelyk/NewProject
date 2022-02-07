@@ -6,10 +6,7 @@ const initialState = {
     login:null,
     email:null,
     isAuth:false,
-    authData:{
-         login:null,
-        password:null
-    }
+
 }
 
 const AuthReducer = (state = initialState, action:authDataACType) => {
@@ -36,6 +33,29 @@ export const  authDataThunk = () => {
         })
     }
 }
+export const  authLoginThunk = (email:string, password:string, rememberMe:boolean) => {
+    return (dispatch:any)=> {
+        AuthAPI.authPost(email, password, rememberMe).then(response => {
+            if(response.resultCode === 0){
+                console.log(response)
+                dispatch(authDataThunk())
+
+            }
+        })
+    }
+}
+export const  authLoginOutThunk = () => {
+    return (dispatch:any)=> {
+        AuthAPI.authDelete().then(response => {
+            if(response.resultCode === 0){
+                dispatch(authDataAC(0, '', ''))
+                dispatch(authDataThunk())
+            }
+        })
+    }
+}
+
+
 
 
 

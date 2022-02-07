@@ -13,7 +13,7 @@ const MessagesForm = (props: any) => {
         <form onSubmit={props.handleSubmit} className={s.dialogs}>
             <MessagesDataContainer/>
             <Field component={textareaInput} type='text' name='sendMessage' validate={[required,maxLength15]}/>
-            <button>send</button>
+            <button type='submit'>send</button>
         </form>
 
     )

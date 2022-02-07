@@ -8,7 +8,7 @@ import UsersAPIComponent from './components/Users/UsersContainer';
 import {MessagesContainer} from "./components/Messages/MessagesContainer";
 import {HeaderContainer} from "./components/Header/HeaderContainer";
 import  {ContainerProfile} from "./components/Profile/ContainerProfile";
-import {Login} from './components/Login/Login';
+import Login from './components/Login/Login';
 
 
 
