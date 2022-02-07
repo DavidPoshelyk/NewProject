@@ -1,4 +1,5 @@
 import React from 'react';
+import {reset} from "redux-form";
 
 
 const ADD_MESSAGE = 'ADD-MESSAGE'
@@ -26,6 +27,7 @@ const AddMessageAC = (sendMessage:string) => ({type:ADD_MESSAGE, sendMessage})
 export const AddMessageACThunk = (sendMessage:string) => {
      return (dispatch:any)=>{
          dispatch(AddMessageAC(sendMessage))
+         dispatch( reset('sendMessage'))
      }
 
 }

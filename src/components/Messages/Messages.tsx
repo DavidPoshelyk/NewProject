@@ -3,7 +3,7 @@ import s from './Messeges.module.css'
 import {DialogsContainer} from "./DialogsContainer";
 import {MessagesDataContainer} from "./Doalogs/MessagesDataContainer";
 import {Field, reduxForm} from "redux-form";
-import {InputText} from "../../component/InputText";
+import {textareaInput} from "../../component/InputText";
 import {maxLength, required} from "../../utils/validate";
 
 const maxLength15 = maxLength(15)
@@ -12,7 +12,7 @@ const MessagesForm = (props: any) => {
     return (
         <form onSubmit={props.handleSubmit} className={s.dialogs}>
             <MessagesDataContainer/>
-            <Field component={InputText} type='text' name='sendMessage' validate={[required,maxLength15]}/>
+            <Field component={textareaInput} type='text' name='sendMessage' validate={[required,maxLength15]}/>
             <button>send</button>
         </form>
 
