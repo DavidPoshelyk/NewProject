@@ -5,7 +5,11 @@ const initialState = {
      id:null,
     login:null,
     email:null,
-    isAuth:false
+    isAuth:false,
+    authData:{
+         login:null,
+        password:null
+    }
 }
 
 const AuthReducer = (state = initialState, action:authDataACType) => {
