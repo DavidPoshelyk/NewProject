@@ -3,15 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e5ac17eb-3795-4fcd-af5e-410df4e4552e" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/auth-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/auth-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/AuthAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/AuthAPI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/InputText.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/InputText.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messages/Messages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages/Messages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,14 +227,7 @@
       <workItem from="1643981841345" duration="9463000" />
       <workItem from="1643991412403" duration="4063000" />
       <workItem from="1644229824411" duration="480000" />
-      <workItem from="1644235330409" duration="7657000" />
-    </task>
-    <task id="LOCAL-00009" summary="commit">
-      <created>1636371975609</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1636371975609</updated>
+      <workItem from="1644235330409" duration="9193000" />
     </task>
     <task id="LOCAL-00010" summary="commit">
       <created>1636713927371</created>
@@ -579,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644238433691</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1644244639716</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1644244639716</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
