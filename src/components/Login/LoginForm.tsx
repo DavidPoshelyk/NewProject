@@ -16,6 +16,7 @@ function LoginForm (props:any) {
             <div>
                 <Field placeholder='password' component={textInput} name='password' validate={[required,maxLength32]} type={'password'}/>
             </div>
+             {props.error && <span style={{background:'red', color:'white'}}>{props.error}</span>}
             <div>
                 <Field type='checkbox' component='input' name='checkbox'/>
                 <span>Remember Me</span>
