@@ -16,4 +16,9 @@
 .imagesH {
     width: 100px;
 }
+.items{
+    width: 100%;
 
+    display: flex;
+   justify-content: flex-end;
+}

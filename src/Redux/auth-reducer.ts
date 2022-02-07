@@ -37,7 +37,6 @@ export const  authLoginThunk = (email:string, password:string, rememberMe:boolea
     return (dispatch:any)=> {
         AuthAPI.authPost(email, password, rememberMe).then(response => {
             if(response.resultCode === 0){
-                console.log(response)
                 dispatch(authDataThunk())
 
 
