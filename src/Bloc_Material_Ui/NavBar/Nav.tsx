@@ -23,29 +23,28 @@ export default function ListDividers() {
     return (
         <List sx={style} component="nav" aria-label="mailbox folders">
             <ListItem button>
-
                 <AccountCircleIcon/>
-                <NavLink activeClassName={s.navLink}  to='/profile'>
+                <NavLink  className={s.navLink} activeClassName={s.navLink}  to='/profile'>
                 <ListItemText sx={{marginLeft:'10%'}} primary="Profile" />
                 </NavLink>
             </ListItem>
             <Divider />
             <ListItem button divider>
                 <SupervisedUserCircleIcon/>
-                <NavLink activeClassName={s.active} to='/friends'>
+                <NavLink  className={s.navLink}activeClassName={s.navLink} to='/friends'>
                 <ListItemText sx={{marginLeft:'10%'}} primary="Friends" />
                 </NavLink>
             </ListItem>
             <ListItem button>
                 <MessageIcon/>
-                <NavLink activeClassName={s.active} to='/messages'>
+                <NavLink className={s.navLink} activeClassName={s.navLink} to='/messages'>
                 <ListItemText sx={{marginLeft:'10%'}} primary="Messages" />
                 </NavLink>
             </ListItem>
             <Divider light />
             <ListItem button>
                 <SettingsIcon/>
-                <NavLink activeClassName={s.active} to='/settings'>
+                <NavLink className={s.navLink} activeClassName={s.navLink} to='/settings'>
                 <ListItemText sx={{marginLeft:'10%'}} primary="Settings" />
                 </NavLink>
             </ListItem>
