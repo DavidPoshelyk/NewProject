@@ -26,11 +26,6 @@ class ContainerProfileAPI extends React.Component<any, any>{
     }
 
 }
- // let AuthRedirectComponent = (props:any) => {
- //     if(!props.isAuth ) return <Redirect to='/login'/>
- //    return <ContainerProfileAPI {...props}/>
- //
- // }
 
 const mapStateToProps = (state: any) => {
     return {

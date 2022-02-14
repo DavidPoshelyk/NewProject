@@ -2,8 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5ac17eb-3795-4fcd-af5e-410df4e4552e" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/App Bar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Content/Content_Container.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Content/Content_Container.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/GroupAvatars/GroupAvatars.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/GroupAvatars/GroupAvatars.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Input_Text/ValidationTextFields.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Login/Login_Container.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Login/Login_Container.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Nav/Nav_Container.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Nav/Nav_Container.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/NavBar/Nav.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/NavBar/Nav.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Profile_Bloc/Profile_Bloc.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Profile_Bloc/Profile_Bloc.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/User/User.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/User/User.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Users/Users_Bloc.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Users/Users_Bloc.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Chekbox/Chekbox_custom.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/CustomButton/CustomButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Pagination/Pagination_Bloc.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/Nav.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Nav.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/ContainerProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ContainerProfile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,10 +42,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="TypeScript JSX File" />
-        <option value="tsconfig.json" />
         <option value="TypeScript File" />
+        <option value="tsconfig.json" />
+        <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -41,7 +70,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Bloc Material Ui" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -53,14 +82,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\NewProject\src\Bloc Material Ui" />
       <recent name="D:\NewProject\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\NewProject\src\Bloc_Material_Ui\NavBar" />
+      <recent name="D:\NewProject\src\Bloc_Material_Ui\GroupAvatars" />
+      <recent name="D:\NewProject\src\Bloc_Material_Ui\Content" />
+      <recent name="D:\NewProject\src\Bloc_Material_Ui\Nav" />
       <recent name="D:\NewProject\src\Preloader" />
-      <recent name="D:\NewProject\my-app\src\components\Settings" />
-      <recent name="D:\NewProject\my-app\src\components\Settings\MenuSettings" />
-      <recent name="D:\NewProject\my-app\src\components\Messages\Doalogs" />
-      <recent name="D:\NewProgect\my-app\src\images" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -226,14 +256,9 @@
       <workItem from="1643981841345" duration="9463000" />
       <workItem from="1643991412403" duration="4063000" />
       <workItem from="1644229824411" duration="480000" />
-      <workItem from="1644235330409" duration="12580000" />
-    </task>
-    <task id="LOCAL-00013" summary="Merge remote-tracking branch 'origin/main'">
-      <created>1637405692320</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1637405692320</updated>
+      <workItem from="1644235330409" duration="14624000" />
+      <workItem from="1644671675652" duration="988000" />
+      <workItem from="1644839048987" duration="29000000" />
     </task>
     <task id="LOCAL-00014" summary="Merge remote-tracking branch 'origin/main'">
       <created>1637405700344</created>
@@ -571,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644249673032</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1644249957123</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1644249957123</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

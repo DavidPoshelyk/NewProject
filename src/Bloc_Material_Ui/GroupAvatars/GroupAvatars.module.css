@@ -1,6 +1,5 @@
-.containerItems{
-
+.GroupAvatars{
+    margin: 5%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }

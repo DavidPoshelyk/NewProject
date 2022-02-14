@@ -1,6 +1,6 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
-import s from "./Nav.module.css"
+import s from "../../Bloc_Material_Ui/NavBar/Nav.module.css"
 
 export function Nav() {
     return (<div className={s.nav}>

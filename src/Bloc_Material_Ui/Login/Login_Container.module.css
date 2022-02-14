@@ -1,0 +1,26 @@
+.LoginContainer{
+    border-radius: 8px;
+    background-color: #fff;
+    min-width:80%;
+    min-height: 450px;
+    height: 90vh;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+}
+.form{
+    padding: 10px;
+    border-radius: 8px;
+   border: 1px solid #edeef0;
+    background-color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.family{
+
+    font-family: -apple-system,BlinkMacSystemFont,'Roboto','Helvetica Neue',Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
+
+}

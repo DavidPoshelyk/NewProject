@@ -1,0 +1,36 @@
+.user{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+
+}
+.userPhoto{
+    padding: 4px;
+
+}
+
+.userInfo{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sizePhoto{
+    border-radius:50%;
+    width: 80px;
+    height: 80px;
+
+}
+.userName{
+    font-family: -apple-system,BlinkMacSystemFont,'Roboto','Helvetica Neue',Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
+    padding: 6px 12px 0px ;
+    display: flex;
+    flex-direction: column;
+}
+.userBotton{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}

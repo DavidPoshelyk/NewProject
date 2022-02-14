@@ -1,0 +1,48 @@
+.ProfileBloc{
+    display: flex;
+    min-height: 300px;
+
+}
+.photoBloc{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(187, 184, 184, 0.37);
+    border-radius: 8px;
+    margin:5px;
+    background-color: #dfe8e8;
+    min-width: 200px;
+
+}
+.infoBloc{
+    border: 1px solid rgba(187, 184, 184, 0.37);
+    border-radius: 8px;
+    margin:5px;
+    background-color: #dfe8e8;
+    min-width: 500px;
+
+}
+.sizePhoto{
+    border-radius: 4px;
+    width: 180px;
+
+}
+
+.name{
+    padding-left: 20px;
+    height: 60px;
+    font-size: 12px;
+    font-family: -apple-system,BlinkMacSystemFont,'Roboto','Helvetica Neue',Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+.photoRefactor{
+    margin-bottom: 10px;
+}

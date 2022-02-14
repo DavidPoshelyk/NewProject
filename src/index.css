@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    width:  auto;
-    background-color: #082326;
+    min-width: 900px;
+    background-color: #edeef0;
     height: auto;
 
 
