@@ -78,15 +78,23 @@ export const getUserThunk = () => {
     }
 }
 export  const paginationUsers = (page: number) => {
-    return (dispatch:any) => {
-        UserAPI.MoreUsers(page).then(data=>{
+    return (dispatch:any, getState:any) => {
+      let isSubscribers = getState().UsersReducer.isSubscribers
+        UserAPI.MoreUsers(page,isSubscribers).then(data=>{
             dispatch(dataUsers(data))
         })
     }
 
 }
 export const getSubscribers = (isFriend:boolean) =>{
+    console.log(isFriend)
     return (dispatch:Dispatch)=>{
+        UserAPI.GetSubscribers(isFriend).then( response=>{
+            console.log(response.data.items)
+            dispatch(dataUsers(response.data))
+            dispatch(isSubscribers(isFriend))
+            }
+        )
 
     }
 }

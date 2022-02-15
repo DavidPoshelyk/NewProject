@@ -8,24 +8,23 @@ import CustomizedInputBase from "../Input_Text/CustomizedInputBase";
 
 
 const UsersBloc = (props:any) => {
+    console.log(props)
 
     return (
         <div className={s.UsersBloc}>
             <div className={s.buttonGrope}>
                 <Button
                     onClick={()=>{
-
                         props.getSubscribers(false)
                     }}
-                    variant={props.isFriend? 'contained':'text'} sx={{width:'20%'}}>
+                    variant={props.isSubscribers? 'text':'contained'} sx={{width:'20%'}}>
                     All Users
                 </Button>
                 <Button
                     onClick={()=>{
-
                         props.getSubscribers(true)
                     }}
-                    variant={props.isFriend? 'text':'contained'}
+                    variant={props.isSubscribers? 'contained':'text'}
                     sx={{width:'20%'}} >
                     Subscribers
                 </Button>

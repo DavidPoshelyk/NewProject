@@ -8,6 +8,7 @@ export default function BasicPagination(props:any) {
         props.paginationUsers(value)
         setPage(value);
     };
+
     return (
         <Stack spacing={2}>
             <Pagination count={props.totalCount/10|0} onChange={handleChange} page={page} />

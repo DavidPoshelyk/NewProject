@@ -26,18 +26,21 @@ class UsersContainer extends React.Component<any, any> {
 
     render() {
         return <UsersBloc
+            isSubscribers={this.props.isSubscribers}
             data={this.props.data}
             clickUnfollowThunk={this.props.clickUnfollowThunk}
             clickFollowThunk={this.props.clickFollowThunk}
             paginationUsers={this.paginationUsers}
             getSubscribers={this.props.getSubscribers}
+
         />
     }
 }
 
 const mapStateToProps = (state: any) => {
     return {
-        data: state.UsersReducer
+        data: state.UsersReducer,
+        isSubscribers:state.UsersReducer.isSubscribers
     }
 }
 
@@ -46,7 +49,8 @@ export default compose(connect(mapStateToProps, {
     clickUnfollowThunk,
     getUserThunk,
     paginationUsers,
-    getSubscribers
+    getSubscribers,
+
 }))(withAuthRedirect(UsersContainer))
 
 

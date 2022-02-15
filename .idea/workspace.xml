@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e5ac17eb-3795-4fcd-af5e-410df4e4552e" name="Changes" comment="pagination Users">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Input_Text/CustomizedInputBase.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Input_Text/CustomizedInputBase.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Profile_Bloc/Profile_Bloc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Profile_Bloc/Profile_Bloc.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/User/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/User/User.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Users/Users_Bloc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Users/Users_Bloc.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/Users-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Users-reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/UserAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/UserAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Pagination/Pagination_Bloc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Pagination/Pagination_Bloc.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -236,14 +234,7 @@
       <workItem from="1644235330409" duration="14624000" />
       <workItem from="1644671675652" duration="988000" />
       <workItem from="1644839048987" duration="29796000" />
-      <workItem from="1644926822107" duration="21458000" />
-    </task>
-    <task id="LOCAL-00018" summary="Merge remote-tracking branch 'origin/main'">
-      <created>1637948239011</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1637948239011</updated>
+      <workItem from="1644926822107" duration="23280000" />
     </task>
     <task id="LOCAL-00019" summary="Merge remote-tracking branch 'origin/main'">
       <created>1637951432097</created>
@@ -581,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644943748549</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="pagination Users">
+      <created>1644949669879</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1644949669879</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

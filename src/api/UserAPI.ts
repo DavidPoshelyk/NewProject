@@ -11,9 +11,9 @@ const instance = axios.create({
     }
 })
 export  const  UserAPI = {
-    MoreUsers:(page:number,friend:boolean)=>{return instance.get(`users?page=${page}&count=10&friend=${friend}`).then((response) => response.data)},
+    MoreUsers:(page:number,friend?:boolean)=>{return instance.get(`users?page=${page}&count=10&friend=${friend}`).then((response) => response.data)},
     GetUsers:()=>{return instance.get('users?page=1').then((response) =>  response.data)},
-    GetSubscribers:()=>{return instance.get('users?page=1&friend=true')},
+    GetSubscribers:(isFriend:boolean)=>{return instance.get(`users?page=1&${isFriend&&`friend=${isFriend}`}`)},
     UnfollowUsers:(id:string)=>{return instance.delete(`follow/${id}`)},
     FollowUsers:(id:string)=>{return instance.post(`follow/${id}`)},
 
