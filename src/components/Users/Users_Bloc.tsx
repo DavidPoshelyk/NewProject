@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from "@mui/material/Button";
 import BasicPagination from "../../component/Pagination/Pagination_Bloc";
 import s from './Users_Bloc.module.css'
-import User from "../User/User";
+import User from "../../Bloc_Material_Ui/User/User";
 import Divider from "@mui/material/Divider";
-import CustomizedInputBase from "../Input_Text/CustomizedInputBase";
+import CustomizedInputBase from "../../Bloc_Material_Ui/Input_Text/CustomizedInputBase";
 
 
 const UsersBloc = (props:any) => {
@@ -45,7 +45,10 @@ const UsersBloc = (props:any) => {
 <div className={s.userPagination}>
     <BasicPagination
         paginationUsers={props.paginationUsers}
-        totalCount={props.data.totalCount}/>
+        totalCount={props.data.totalCount}
+        page={props.page}
+    />
+
 </div>
 
 

@@ -74,6 +74,7 @@ export const getUserThunk = () => {
         UserAPI.GetUsers().then(data => {
             dispatch(dataUsers(data))
             dispatch(isFetching(false))
+            dispatch(pageUser(1))
         })
     }
 }
@@ -81,6 +82,7 @@ export  const paginationUsers = (page: number) => {
     return (dispatch:any, getState:any) => {
       let isSubscribers = getState().UsersReducer.isSubscribers
         UserAPI.MoreUsers(page,isSubscribers).then(data=>{
+            dispatch(pageUser(page))
             dispatch(dataUsers(data))
         })
     }
@@ -93,6 +95,7 @@ export const getSubscribers = (isFriend:boolean) =>{
             console.log(response.data.items)
             dispatch(dataUsers(response.data))
             dispatch(isSubscribers(isFriend))
+            dispatch(pageUser(1))
             }
         )
 

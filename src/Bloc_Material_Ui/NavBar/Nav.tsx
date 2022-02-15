@@ -8,7 +8,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
 import s from "./Nav.module.css";
-import {NavLink, Redirect} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import GroupAvatars from "../GroupAvatars/GroupAvatars";
 
 
@@ -32,22 +32,18 @@ export default function ListDividers() {
             <Divider />
             <ListItem button divider>
                 <SupervisedUserCircleIcon/>
-                <NavLink  className={s.navLink}activeClassName={s.navLink} to='/friends'>
+                <NavLink  className={s.navLink} activeClassName={s.navLink} to='/friends'>
                 <ListItemText sx={{marginLeft:'10%'}} primary="Friends" />
                 </NavLink>
             </ListItem>
             <ListItem button>
                 <MessageIcon/>
-                {/*<NavLink className={s.navLink} activeClassName={s.navLink} to='/messages'>*/}
                 <ListItemText sx={{marginLeft:'10%'}} primary="Messages" />
-                {/*</NavLink>*/}
             </ListItem>
             <Divider light />
             <ListItem button>
                 <SettingsIcon/>
-                {/*<NavLink className={s.navLink} activeClassName={s.navLink} to='/settings'>*/}
                 <ListItemText sx={{marginLeft:'10%'}} primary="Settings" />
-                {/*</NavLink>*/}
             </ListItem>
             <Divider/>
             <GroupAvatars/>

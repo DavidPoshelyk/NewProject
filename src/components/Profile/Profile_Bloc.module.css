@@ -1,7 +1,5 @@
 .ProfileBloc{
     display: flex;
-    /*min-height: 300px;*/
-
 }
 .photoBloc{
     display: flex;
@@ -10,7 +8,6 @@
     align-items: center;
     border: 1px solid rgba(187, 184, 184, 0.37);
     border-radius: 8px;
-    /*margin:5px;*/
     background-color: #fff;
     min-width: 200px;
 
@@ -18,9 +15,7 @@
 .infoBloc{
     border: 1px solid rgba(187, 184, 184, 0.37);
     border-radius: 8px;
-    /*margin:5px;*/
     background-color: #fff;
-    /*min-width: 500px;*/
     width: 100%;
 
 }

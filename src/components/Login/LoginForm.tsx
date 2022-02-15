@@ -1,6 +1,6 @@
 import {Field, reduxForm} from "redux-form";
 import React from "react";
-import {maxLength, required} from "../../utils/validate";
+import {maxLength, required} from "../utils/validate";
 import OutlinedButtons from "../../component/CustomButton/CustomButton";
 import CheckboxLabels from "../../component/Chekbox/Chekbox_custom";
 import ValidationTextFields from "../../Bloc_Material_Ui/Input_Text/ValidationTextFields";

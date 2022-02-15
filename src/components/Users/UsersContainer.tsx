@@ -6,20 +6,15 @@ import {
     paginationUsers
 } from "../../Redux/Users-reducer";
 import React from "react";
-import {Users} from "./Users";
 import {withAuthRedirect} from "../hoc/withAuthHoc";
-import {Messages} from "../Messages/Messages";
 import {compose} from "redux";
-import UsersBloc from "../../Bloc_Material_Ui/Users/Users_Bloc";
-
+import UsersBloc from "./Users_Bloc";
 
 class UsersContainer extends React.Component<any, any> {
-
-
     componentDidMount() {
         this.props.getUserThunk()
+        console.log(this.props)
     }
-
     paginationUsers = (page: number, isSubscriber?: boolean) => {
         this.props.paginationUsers(page, isSubscriber)
     }
@@ -32,6 +27,7 @@ class UsersContainer extends React.Component<any, any> {
             clickFollowThunk={this.props.clickFollowThunk}
             paginationUsers={this.paginationUsers}
             getSubscribers={this.props.getSubscribers}
+            page={this.props.page}
 
         />
     }
@@ -40,7 +36,8 @@ class UsersContainer extends React.Component<any, any> {
 const mapStateToProps = (state: any) => {
     return {
         data: state.UsersReducer,
-        isSubscribers:state.UsersReducer.isSubscribers
+        isSubscribers: state.UsersReducer.isSubscribers,
+        page: state.UsersReducer.page
     }
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import {authDataThunk, authLoginOutThunk} from "../../Redux/auth-reducer";
-import ButtonAppBar from "../../Bloc_Material_Ui/App Bar";
+import ButtonAppBar from "./App Bar";
 
 
 export class HeaderContainerAPI extends React.Component<any, any> {
