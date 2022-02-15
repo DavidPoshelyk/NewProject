@@ -2,7 +2,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-export default function ValidationTextFields() {
+export default function ValidationTextFields({input, meta, ...props}:any) {
+    const {touched,error,warning} = meta
     return (
         <Box
             component="form"
@@ -14,12 +15,12 @@ export default function ValidationTextFields() {
         >
             <div>
                 <TextField
-                    sx={{minWidth:'280px', }}
-                    error
+                    label={props.nameInput}
+                    {...input}
+                    {...props}
+                    sx={{minWidth:'280px'}}
+                    error={touched}
                     id="outlined-error-helper-text"
-                    label="Error"
-                    // defaultValue="Hello World"
-                    helperText="Incorrect entry."
                 />
             </div>
 

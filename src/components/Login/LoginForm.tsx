@@ -1,7 +1,9 @@
 import {Field, reduxForm} from "redux-form";
 import React from "react";
-import {textInput} from "../../component/InputText";
 import {maxLength, required} from "../../utils/validate";
+import OutlinedButtons from "../../component/CustomButton/CustomButton";
+import CheckboxLabels from "../../component/Chekbox/Chekbox_custom";
+import ValidationTextFields from "../../Bloc_Material_Ui/Input_Text/ValidationTextFields";
 const maxLength32 = maxLength(32)
 
 
@@ -10,20 +12,11 @@ const maxLength32 = maxLength(32)
 function LoginForm (props:any) {
     return (
         <form onSubmit={props.handleSubmit}>
-            <div>
-                <Field placeholder='login' component={textInput} name='login' validate={[required,maxLength32]}/>
-            </div>
-            <div>
-                <Field placeholder='password' component={textInput} name='password' validate={[required,maxLength32]} type={'password'}/>
-            </div>
-             {props.error && <span style={{background:'red', color:'white'}}>{props.error}</span>}
-            <div>
-                <Field type='checkbox' component='input' name='checkbox'/>
-                <span>Remember Me</span>
-            </div>
-            <div>
-                <button type='submit'>Sing In</button>
-            </div>
+            <Field  nameInput='Login' component={ValidationTextFields} name='login' validate={[required,maxLength32]}/>
+            <Field nameInput='Password' component={ValidationTextFields} name='password' validate={[required,maxLength32]} type={'password'}/>
+            {props.error && <span style={{background:'red', color:'white'}}>{props.error}</span>}
+            <Field type='checkbox' label="Remember Me" component={CheckboxLabels} name='checkbox'/>
+            <OutlinedButtons  type='submit 'minWidth='320px'  name='Log In'/>
         </form>
     )
 

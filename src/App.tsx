@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import "./components/Header/Header";
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, NavLink, Redirect, Route} from 'react-router-dom';
 import ButtonAppBar from "./Bloc_Material_Ui/App Bar";
 import NavContainer from './Bloc_Material_Ui/Nav/Nav_Container';
 import СontentContainer from './Bloc_Material_Ui/Content/Content_Container';
@@ -11,7 +11,12 @@ import Button from '@mui/material/Button';
 import BasicPagination from "./component/Pagination/Pagination_Bloc";
 import UsersBloc from "./Bloc_Material_Ui/Users/Users_Bloc";
 import ProfileBloc from './Bloc_Material_Ui/Profile_Bloc/Profile_Bloc';
+import Login from "./Bloc_Material_Ui/Login/Login_Container";
+import {HeaderContainer} from "./components/Header/HeaderContainer";
+import {ContainerProfile} from "./components/Profile/ContainerProfile";
 import LoginContainer from "./Bloc_Material_Ui/Login/Login_Container";
+import UsersContainer from './components/Users/UsersContainer';
+
 
 
 function App() {
@@ -19,18 +24,37 @@ function App() {
     return (
         <>
             <BrowserRouter>
-                <ButtonAppBar/>
+                <HeaderContainer/>
                 <div className='containerItems'>
-                    {/*<Route path='/login' render={() => <LoginContainer/>}/>*/}
-                    {/*<LoginContainer/>*/}
-                    <NavContainer>
-                        <MenuListComposition/>
+                    <Redirect from="/" to="profile" />
 
-                    </NavContainer>
-                    <СontentContainer>
-                        <ProfileBloc/>
-                        <UsersBloc/>
-                    </СontentContainer>
+                    <Route path='/login' render={() => <LoginContainer/>}/>
+                    <Route path='/profile' render={() => {
+                        return(
+                            <СontentContainer>
+                                <ContainerProfile/>
+                            </СontentContainer>
+
+                        )
+                    }}/>
+
+                    <Route path='/friends' render={() => {
+                        return(
+                            <СontentContainer>
+                                <UsersContainer/>
+                            </СontentContainer>
+
+                        )
+                    }}/>
+
+
+
+                    {/*<LoginContainer/>*/}
+
+
+
+
+
 
 
                         {/*<Route path='/profile' render={() => {*/}

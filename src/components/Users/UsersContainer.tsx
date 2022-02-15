@@ -1,28 +1,35 @@
 import {connect} from "react-redux";
-import {clickFollowThunk, clickUnfollowThunk, getUserThunk, moreUsers} from "../../Redux/Users-reducer";
+import {
+    clickFollowThunk,
+    clickUnfollowThunk,
+    getUserThunk,
+    paginationUsers
+} from "../../Redux/Users-reducer";
 import React from "react";
 import {Users} from "./Users";
 import {withAuthRedirect} from "../hoc/withAuthHoc";
 import {Messages} from "../Messages/Messages";
 import {compose} from "redux";
+import UsersBloc from "../../Bloc_Material_Ui/Users/Users_Bloc";
 
 
-class UsersAPIComponent extends React.Component<any, any> {
+class UsersContainer extends React.Component<any, any> {
 
 
     componentDidMount() {
         this.props.getUserThunk()
     }
 
-    moreUsers = (page: number) => {
-        this.props.moreUsers(page)
+    paginationUsers = (page: number) => {
+        this.props.paginationUsers(page)
     }
 
     render() {
-        return <Users data={this.props.data}
-                      clickUnfollowThunk={this.props.clickUnfollowThunk}
-                      clickFollowThunk={this.props.clickFollowThunk}
-                      moreUser={this.moreUsers}/>
+        return <UsersBloc data={this.props.data}
+                      // clickUnfollowThunk={this.props.clickUnfollowThunk}
+                      // clickFollowThunk={this.props.clickFollowThunk}
+                          paginationUsers={this.paginationUsers}
+        />
     }
 }
 
@@ -36,7 +43,7 @@ export default compose(connect(mapStateToProps, {
     clickFollowThunk,
     clickUnfollowThunk,
     getUserThunk,
-    moreUsers,
-}))(withAuthRedirect(UsersAPIComponent))
+    paginationUsers,
+}))(withAuthRedirect(UsersContainer))
 
 

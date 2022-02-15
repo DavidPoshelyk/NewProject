@@ -9,7 +9,7 @@ export default function OutlinedButtons(props:any) {
             {/*<Button variant="outlined" disabled>*/}
             {/*    Disabled*/}
             {/*</Button>*/}
-            <Button sx={{minWidth:props.minWidth}}>
+            <Button type={props.type} sx={{minWidth:props.minWidth}}>
                 {props.name}
             </Button>
         </Stack>

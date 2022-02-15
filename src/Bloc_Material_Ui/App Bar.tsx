@@ -5,12 +5,12 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import { NavLink } from 'react-router-dom';
+import Avatar from '@mui/material/Avatar';
+import {NavLink} from 'react-router-dom';
 
-export default function ButtonAppBar() {
+export default function ButtonAppBar(props: any) {
     return (
-        <Box sx={{ flexGrow: 1, minWidth:"360px",  }}>
+        <Box sx={{flexGrow: 1, minWidth: "360px",}}>
             <AppBar position="static">
                 <Toolbar>
                     <IconButton
@@ -18,19 +18,29 @@ export default function ButtonAppBar() {
                         edge="start"
                         color="inherit"
                         aria-label="menu"
-                        sx={{ mr: 2 }}
+                        sx={{mr: 2}}
                     >
-                        <MenuIcon />
+                        <Avatar
+                            alt="Remy Sharp"
+                            src="/static/images/avatar/1.jpg"
+                            // sx={{ width: 56, height: 56 }}
+                        />
+
                     </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
 
                     </Typography>
-                    <Button color="inherit">
-                        <NavLink to='/login'>
-                            Login
-                        </NavLink>
-
-                    </Button>
+                    {!props.data.isAuth ?
+                        <Button color="inherit">
+                            <NavLink to='/login'>Login</NavLink>
+                        </Button>
+                        :
+                        <Button onClick={() => {
+                            props.authLoginOutThunk()
+                        }} color="inherit">
+                            Login Out
+                        </Button>
+                    }
                 </Toolbar>
             </AppBar>
         </Box>

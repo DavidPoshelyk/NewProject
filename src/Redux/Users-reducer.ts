@@ -2,7 +2,7 @@ import {UserAPI} from "../api/UserAPI";
 
 const initialState = {
     user: [],
-    totalCount: 1,
+    totalCount: null,
     page: 1,
     count: 20,
     error: null,
@@ -14,7 +14,7 @@ const initialState = {
 
  const UsersReducer = (state:any = initialState, action:followACType|unfollowACType| dataUsersACType|pageUserACType|isFetchingUserACType|followProgressACType) => {
     switch (action.type) {
-        case "DATA-USERS": {return  {...state, user:[...state.user,...action.data.items ] , totalCount: action.data.totalCount, error: action.data.error}}
+        case "DATA-USERS": {return  {...state, user:[...action.data.items ] , totalCount: action.data.totalCount, error: action.data.error}}
         case'FOLLOW' :{return  {...state, followProgress:[...state.followProgress].filter(f=> f !== action.id), user:state.user.map((m:any)=> m.id === action.id? {...m, followed:true}: m ) } }
         case'UNFOLLOW' :{return {...state, followProgress:[...state.followProgress].filter(f=> f !== action.id),  user:state.user.map((m:any)=> m.id === action.id? {...m, followed:false}: m ) }}
         case "PAGE-USER": {return {...state, page: action.page}}
@@ -69,7 +69,7 @@ export const getUserThunk = () => {
         })
     }
 }
-export  const moreUsers = (page: number) => {
+export  const paginationUsers = (page: number) => {
     return (dispatch:any) => {
         // this.props.pageUser(page)
         UserAPI.MoreUsers(page).then(data=>{

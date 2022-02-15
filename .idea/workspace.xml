@@ -2,16 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5ac17eb-3795-4fcd-af5e-410df4e4552e" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
+      <change afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Input_Text/CustomizedInputBase.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/App Bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/App Bar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Content/Content_Container.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Content/Content_Container.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Content/Content_Container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Content/Content_Container.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Input_Text/ValidationTextFields.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Input_Text/ValidationTextFields.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Login/Login_Container.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Login/Login_Container.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Login/Login_Container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Login/Login_Container.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Nav/Nav_Container.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Nav/Nav_Container.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Nav/Nav_Container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Nav/Nav_Container.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/NavBar/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/NavBar/Nav.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Profile_Bloc/Profile_Bloc.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Profile_Bloc/Profile_Bloc.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Profile_Bloc/Profile_Bloc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Profile_Bloc/Profile_Bloc.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/User/User.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/User/User.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/User/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/User/User.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Users/Users_Bloc.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Users/Users_Bloc.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Users/Users_Bloc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Users/Users_Bloc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Users-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Users-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/UserAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/UserAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Chekbox/Chekbox_custom.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Chekbox/Chekbox_custom.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/CustomButton/CustomButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/CustomButton/CustomButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Pagination/Pagination_Bloc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Pagination/Pagination_Bloc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ContainerProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ContainerProfile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +41,8 @@
       <list>
         <option value="TypeScript File" />
         <option value="tsconfig.json" />
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -238,14 +256,7 @@
       <workItem from="1644235330409" duration="14624000" />
       <workItem from="1644671675652" duration="988000" />
       <workItem from="1644839048987" duration="29796000" />
-      <workItem from="1644926822107" duration="3019000" />
-    </task>
-    <task id="LOCAL-00016" summary="Merge remote-tracking branch 'origin/main'">
-      <created>1637837276879</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1637837276879</updated>
+      <workItem from="1644926822107" duration="15554000" />
     </task>
     <task id="LOCAL-00017" summary="Merge remote-tracking branch 'origin/main'">
       <created>1637928548653</created>
@@ -583,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644871551395</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1644930105273</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1644930105273</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

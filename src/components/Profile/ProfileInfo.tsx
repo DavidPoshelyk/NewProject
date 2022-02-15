@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import s from './Contents.module.css'
 import userPhoto from './../../images/9082227.png'
 import Ring from "../../Preloader/Ring";
-import {Redirect} from "react-router-dom";
 import {ProfileStatus} from "./ProfileStatus";
 
 

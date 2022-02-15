@@ -1,21 +1,37 @@
 import React from 'react';
-import ValidationTextFields from '../Input_Text/ValidationTextFields';
 import s from './Login_Container.module.css'
-import OutlinedButtons from "../../component/CustomButton/CustomButton";
-import CheckboxLabels from "../../component/Chekbox/Chekbox_custom";
+import LoginForm from '../../components/Login/LoginForm';
+import {Redirect} from "react-router-dom";
+import {connect} from "react-redux";
+import {authLoginThunk} from "../../Redux/auth-reducer";
 
-const LoginContainer = () => {
+const LoginContainer = (props:any) => {
+    const onSubmit = (formData:any) =>{
+        props.authLoginThunk(formData.login, formData.password, true)
+        console.log(props.isAuth)
+    }
+
+    if(props.isAuth)  return <Redirect to={'/profile'}/>
     return (
         <div className={s.LoginContainer}>
             <div className={s.form}>
                 <h1 className={s.family}>Log in</h1>
-                <ValidationTextFields/>
-                <ValidationTextFields/>
-                <CheckboxLabels/>
-                <OutlinedButtons minWidth='320px'  name='Log In'/>
+                <LoginForm onSubmit={onSubmit}/>
+                {/*<ValidationTextFields/>*/}
+                {/*<ValidationTextFields/>*/}
+                {/*<CheckboxLabels/>*/}
+                {/*<OutlinedButtons minWidth='320px'  name='Log In'/>*/}
             </div>
         </div>
     );
 };
 
-export default LoginContainer;
+const mapDispatchToProps = (state:any) => {
+    return{
+        isAuth: state.AuthReducer.isAuth
+    }
+
+}
+export  default connect(mapDispatchToProps, {authLoginThunk})(LoginContainer)
+
+

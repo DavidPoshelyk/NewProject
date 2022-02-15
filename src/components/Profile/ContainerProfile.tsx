@@ -4,6 +4,7 @@ import Profile from "./Profile";
 import {getStatusThunk, profilePage, updateStatusThunk} from "../../Redux/Profile-reducer";
 import { withRouter} from "react-router-dom";
 import { withAuthRedirect } from "../hoc/withAuthHoc";
+import ProfileBloc from "../../Bloc_Material_Ui/Profile_Bloc/Profile_Bloc";
 
 
 
@@ -22,7 +23,7 @@ class ContainerProfileAPI extends React.Component<any, any>{
 
 
     render() {
-            return <Profile {...this.props} status={this.props.data.status} updateStatusThunk={this.props.updateStatusThunk}/>
+            return <ProfileBloc {...this.props.data} status={this.props.data.status} updateStatusThunk={this.props.updateStatusThunk}/>
     }
 
 }

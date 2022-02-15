@@ -13,12 +13,12 @@ import {Redirect} from "react-router-dom";
         console.log(props.isAuth)
     }
 
-    if(props.isAuth)  return <Redirect to={'/profile'}/>
+    // if(props.isAuth)  return <Redirect to={'/profile'}/>
     return (
-            <div>
-                <h1>Login</h1>
+            <>
+
                 <LoginForm onSubmit={onSubmit}/>
-            </div>
+            </>
         );
     }
 

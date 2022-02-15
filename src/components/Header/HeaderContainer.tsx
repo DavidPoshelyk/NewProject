@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
-import {Header} from "./Header";
 import {authDataThunk, authLoginOutThunk} from "../../Redux/auth-reducer";
+import ButtonAppBar from "../../Bloc_Material_Ui/App Bar";
 
 
 export class HeaderContainerAPI extends React.Component<any, any> {
@@ -11,7 +11,7 @@ export class HeaderContainerAPI extends React.Component<any, any> {
     }
 
     render() {
-        return <Header {...this.props}/>;
+        return <ButtonAppBar {...this.props}/>;
     }
 }
 
