@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './Profile_Bloc.module.css'
 import OutlinedButtons from "../../component/CustomButton/CustomButton";
+import Divider from "@mui/material/Divider";
 
 const ProfileBloc = () => {
     return (
@@ -18,9 +19,11 @@ const ProfileBloc = () => {
                 <div className={s.name}>
                   <h1>David Poshelyuk</h1>
                 </div>
+                <Divider/>
                 <div className={s.info}>
                     <OutlinedButtons minWidth='460px'  name='Show detailed information'/>
                 </div>
+                <Divider/>
             </div>
         </div>
 

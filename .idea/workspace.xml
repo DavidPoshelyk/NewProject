@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e5ac17eb-3795-4fcd-af5e-410df4e4552e" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/App Bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/App Bar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/NavBar/Nav.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/NavBar/Nav.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Content/Content_Container.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Content/Content_Container.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Nav/Nav_Container.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Nav/Nav_Container.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/NavBar/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/NavBar/Nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Profile_Bloc/Profile_Bloc.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Profile_Bloc/Profile_Bloc.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Profile_Bloc/Profile_Bloc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Profile_Bloc/Profile_Bloc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/User/User.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/User/User.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bloc_Material_Ui/Users/Users_Bloc.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bloc_Material_Ui/Users/Users_Bloc.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,14 +237,8 @@
       <workItem from="1644229824411" duration="480000" />
       <workItem from="1644235330409" duration="14624000" />
       <workItem from="1644671675652" duration="988000" />
-      <workItem from="1644839048987" duration="29726000" />
-    </task>
-    <task id="LOCAL-00015" summary="Merge remote-tracking branch 'origin/main'">
-      <created>1637759579706</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1637759579706</updated>
+      <workItem from="1644839048987" duration="29796000" />
+      <workItem from="1644926822107" duration="3019000" />
     </task>
     <task id="LOCAL-00016" summary="Merge remote-tracking branch 'origin/main'">
       <created>1637837276879</created>
@@ -577,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644870801657</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1644871551395</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1644871551395</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,6 +1,7 @@
 .СontentContainer{
+    background-color: #7294a1;
 min-width: 700px;
-    height:  100vh;
-    margin: 10px;
+    height:  100%;
+    /*margin: 10px;*/
 
 }

@@ -18,25 +18,53 @@ function App() {
 
     return (
         <>
-        <BrowserRouter>
-            <ButtonAppBar/>
-            <div className='containerItems'>
+            <BrowserRouter>
+                <ButtonAppBar/>
+                <div className='containerItems'>
+                    {/*<Route path='/login' render={() => <LoginContainer/>}/>*/}
+                    {/*<LoginContainer/>*/}
+                    <NavContainer>
+                        <MenuListComposition/>
 
-                {/*<LoginContainer/>*/}
-                <NavContainer>
-                    <MenuListComposition/>
-                    <GroupAvatars/>
-                </NavContainer>
-                <СontentContainer>
-                    <Route path='/login' render={() => <LoginContainer/>}/>
-                    <Route path='/profile' render={() => <ProfileBloc/>}/>
-                    <Route path='/friends' render={() => <UsersBloc/>}/>
-                    {/*<div style={{background: 'red'}}>user</div>*/}
-                    {/*<ProfileBloc/>*/}
-                </СontentContainer>
+                    </NavContainer>
+                    <СontentContainer>
+                        <ProfileBloc/>
+                        <UsersBloc/>
+                    </СontentContainer>
 
 
-            </div>
+                        {/*<Route path='/profile' render={() => {*/}
+                        {/*    return (*/}
+                        {/*        <>*/}
+                        {/*            <NavContainer>*/}
+                        {/*                <MenuListComposition/>*/}
+                        {/*                <GroupAvatars/>*/}
+                        {/*            </NavContainer>*/}
+                        {/*            <СontentContainer>*/}
+                        {/*            <ProfileBloc/>*/}
+                        {/*            </СontentContainer>*/}
+                        {/*        </>*/}
+                        {/*    )*/}
+                        {/*}}/>*/}
+                        {/*<Route path='/friends' render={() => {*/}
+                        {/*    return (*/}
+                        {/*        <>*/}
+                        {/*            <NavContainer>*/}
+                        {/*                <MenuListComposition/>*/}
+                        {/*                <GroupAvatars/>*/}
+                        {/*            </NavContainer>*/}
+                        {/*            <СontentContainer>*/}
+                        {/*            */}
+                        {/*            </СontentContainer>*/}
+                        {/*        </>*/}
+                        {/*    )*/}
+                        {/*}}/>*/}
+                        {/*<div style={{background: 'red'}}>user</div>*/}
+                        {/*<ProfileBloc/>*/}
+
+
+
+                </div>
 
 
                 {/*<HeaderContainer/>*/}
@@ -49,10 +77,10 @@ function App() {
                 {/*    <Route path='/login' render={() => <Login/>}/>*/}
                 {/*</div>*/}
 
-        </BrowserRouter>
+            </BrowserRouter>
 
 
-  </>  );
+        </>);
 }
 
 export default App;

@@ -9,11 +9,13 @@ import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
 import s from "./Nav.module.css";
 import { NavLink } from 'react-router-dom';
+import GroupAvatars from "../GroupAvatars/GroupAvatars";
 
 
 const style = {
     borderRadius:'8px 8px 0 0',
     width: '100%',
+    // height:'100%',
     maxWidth: 360,
     bgcolor: 'background.paper',
 };
@@ -48,6 +50,12 @@ export default function ListDividers() {
                 <ListItemText sx={{marginLeft:'10%'}} primary="Settings" />
                 </NavLink>
             </ListItem>
+            <Divider/>
+            <GroupAvatars/>
+            <GroupAvatars/>
+            <GroupAvatars/>
+            <GroupAvatars/>
+            <GroupAvatars/>
         </List>
     );
 }
