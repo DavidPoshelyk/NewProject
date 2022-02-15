@@ -4,6 +4,7 @@ import OutlinedButtons from "../../component/CustomButton/CustomButton";
 import Divider from "@mui/material/Divider";
 
 const ProfileBloc = (props:any) => {
+
     return (
         <div>
         <div className={s.ProfileBloc}>
@@ -18,6 +19,7 @@ const ProfileBloc = (props:any) => {
             <div className={s.infoBloc}>
                 <div className={s.name}>
                   <h1>{props.fullName}</h1>
+                    <span>{props.status}</span>
                 </div>
                 <Divider/>
                 <div className={s.info}>

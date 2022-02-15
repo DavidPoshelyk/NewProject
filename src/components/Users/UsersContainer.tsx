@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import {
     clickFollowThunk,
-    clickUnfollowThunk,
+    clickUnfollowThunk, getSubscribers,
     getUserThunk,
     paginationUsers
 } from "../../Redux/Users-reducer";
@@ -20,15 +20,17 @@ class UsersContainer extends React.Component<any, any> {
         this.props.getUserThunk()
     }
 
-    paginationUsers = (page: number) => {
-        this.props.paginationUsers(page)
+    paginationUsers = (page: number, isSubscriber?: boolean) => {
+        this.props.paginationUsers(page, isSubscriber)
     }
 
     render() {
-        return <UsersBloc data={this.props.data}
-                      // clickUnfollowThunk={this.props.clickUnfollowThunk}
-                      // clickFollowThunk={this.props.clickFollowThunk}
-                          paginationUsers={this.paginationUsers}
+        return <UsersBloc
+            data={this.props.data}
+            clickUnfollowThunk={this.props.clickUnfollowThunk}
+            clickFollowThunk={this.props.clickFollowThunk}
+            paginationUsers={this.paginationUsers}
+            getSubscribers={this.props.getSubscribers}
         />
     }
 }
@@ -44,6 +46,7 @@ export default compose(connect(mapStateToProps, {
     clickUnfollowThunk,
     getUserThunk,
     paginationUsers,
+    getSubscribers
 }))(withAuthRedirect(UsersContainer))
 
 

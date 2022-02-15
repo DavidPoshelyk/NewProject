@@ -18,8 +18,8 @@ export default function CustomizedInputBase() {
             {/*</IconButton>*/}
             <InputBase
                 sx={{ ml: 1, flex: 1 }}
-                placeholder="Search Google Maps"
-                inputProps={{ 'aria-label': 'search google maps' }}
+                placeholder="User Search"
+                inputProps={{ 'aria-label': 'User Search' }}
             />
             {/*<IconButton type="submit" sx={{ p: '10px' }} aria-label="search">*/}
             {/*    <SearchIcon />*/}

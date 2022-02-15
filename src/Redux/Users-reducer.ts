@@ -1,4 +1,5 @@
 import {UserAPI} from "../api/UserAPI";
+import {Dispatch} from "redux";
 
 const initialState = {
     user: [],
@@ -7,12 +8,13 @@ const initialState = {
     count: 20,
     error: null,
     isFetching:false,
-    followProgress: []
+    followProgress: [],
+    isSubscribers:false
 }
 
 
 
- const UsersReducer = (state:any = initialState, action:followACType|unfollowACType| dataUsersACType|pageUserACType|isFetchingUserACType|followProgressACType) => {
+ const UsersReducer = (state:any = initialState, action:followACType|unfollowACType| dataUsersACType|pageUserACType|isFetchingUserACType|followProgressACType|isSubscribersType) => {
     switch (action.type) {
         case "DATA-USERS": {return  {...state, user:[...action.data.items ] , totalCount: action.data.totalCount, error: action.data.error}}
         case'FOLLOW' :{return  {...state, followProgress:[...state.followProgress].filter(f=> f !== action.id), user:state.user.map((m:any)=> m.id === action.id? {...m, followed:true}: m ) } }
@@ -20,6 +22,7 @@ const initialState = {
         case "PAGE-USER": {return {...state, page: action.page}}
         case "FETCHING-USER": {return {...state, isFetching:action.isFetching }}
         case "FOLLOW-PROGRESS": {return {...state, followProgress:[...state.followProgress, action.id]}}
+        case "IS-SUBCRIBERS": {return {...state, isSubscribers:action.isFriend}}
 
 
 default: return state
@@ -32,6 +35,7 @@ type dataUsersACType = ReturnType<typeof dataUsers>
 type pageUserACType = ReturnType<typeof pageUser >
 type isFetchingUserACType = ReturnType<typeof isFetching >
 type followProgressACType = ReturnType<typeof followProgress >
+type isSubscribersType = ReturnType<typeof isSubscribers >
 
 export const clickFollow = (id: string) => {return { type: 'FOLLOW',id}as const}
 export const clickUnfollow = (id: string) => {return {type: 'UNFOLLOW', id} as const}
@@ -39,12 +43,15 @@ export const dataUsers = (data: any) => {return {type: "DATA-USERS", data}as con
 export const pageUser = (page: any) => {return {type: "PAGE-USER", page}as const}
 export const isFetching = (isFetching: any) => {return {type: "FETCHING-USER", isFetching}as const}
 export const followProgress = (id:string)=> {return {type:'FOLLOW-PROGRESS', id} as const}
+export const isSubscribers = (isFriend:boolean) => {return {type: 'IS-SUBCRIBERS', isFriend} as const}
+
 
 export const clickFollowThunk = (id:string) => {
     return (dispatch:any) => {
         dispatch(followProgress(id))
-        UserAPI.UnfollowUsers(id).then(code => {
-            if (code === 0) {
+        UserAPI.UnfollowUsers(id).then(response => {
+            console.log(response)
+            if (response.data.resultCode === 0) {
                 dispatch(clickUnfollow(id))
             }
         })
@@ -53,8 +60,9 @@ export const clickFollowThunk = (id:string) => {
 export const clickUnfollowThunk = (id:string) => {
     return (dispatch:any) => {
         dispatch(followProgress(id))
-        UserAPI.FollowUsers(id).then(code => {
-            if (code === 0) {
+        console.log(id)
+        UserAPI.FollowUsers(id).then(response => {
+            if (response.data.resultCode === 0) {
                 dispatch(clickFollow(id))
             }
         })
@@ -71,12 +79,16 @@ export const getUserThunk = () => {
 }
 export  const paginationUsers = (page: number) => {
     return (dispatch:any) => {
-        // this.props.pageUser(page)
         UserAPI.MoreUsers(page).then(data=>{
             dispatch(dataUsers(data))
         })
     }
 
+}
+export const getSubscribers = (isFriend:boolean) =>{
+    return (dispatch:Dispatch)=>{
+
+    }
 }
 
 

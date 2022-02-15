@@ -22,8 +22,24 @@ const User = (props:any) => {
 
                 </div>
                 <div className={s.userBotton}>
-                    <Button color='success'>Follow</Button>
-                    <Button color='secondary'>Unfollow</Button>
+                    {props.followed?
+                        <Button
+                            disabled={props.followProgress.some((s: number) => s === props.id)}
+                            onClick={()=>{
+                            console.log(props.id)
+                            props.clickFollowThunk(props.id)
+
+                        }} color='secondary'>Unfollow</Button>
+                        :
+                        <Button
+                            disabled={props.followProgress.some((s: number) => s === props.id)}
+                            onClick={()=>{
+                            console.log(props.id)
+                                props.clickUnfollowThunk(props.id)
+                        }
+                        }color='success'>Follow</Button>}
+
+
                 </div>
 
             </div>
