@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Profile_Bloc.module.css'
-import OutlinedButtons from "../../component/CustomButton/CustomButton";
+import OutlinedButtons from "../../Bloc_Material_Ui/CustomButton/CustomButton";
 import Divider from "@mui/material/Divider";
 
 const ProfileBloc = (props: any) => {

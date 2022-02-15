@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter, Redirect, Route} from 'react-router-dom';
-import СontentContainer from './Bloc_Material_Ui/Content/Content_Container';
+import СontentContainer from './components/ContentContainer/Content_Container';
 import LoginContainer from "./components/Login/Login_Container";
 import {HeaderContainer} from "./components/Header/HeaderContainer";
 import {ContainerProfile} from "./components/Profile/ContainerProfile";

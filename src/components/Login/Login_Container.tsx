@@ -3,7 +3,7 @@ import s from './Login_Container.module.css'
 import LoginForm from './LoginForm';
 import {Redirect} from "react-router-dom";
 import {connect} from "react-redux";
-import {authLoginThunk} from "../../Redux/auth-reducer";
+import {authLoginThunk} from "../../Redux/Auth-reducer";
 
 const LoginContainer = (props:any) => {
     const onSubmit = (formData:any) =>{

@@ -1,4 +1,4 @@
-import {UserAPI} from "../api/UserAPI";
+import {UserAPI} from "./api/UserAPI";
 import {Dispatch} from "redux";
 
 const initialState = {

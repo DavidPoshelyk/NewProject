@@ -7,9 +7,9 @@ import MessageIcon from '@mui/icons-material/Message';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
-import s from "./Nav.module.css";
+import s from "./Nav_Bloc.module.css";
 import {NavLink} from 'react-router-dom';
-import GroupAvatars from "../GroupAvatars/GroupAvatars";
+import GroupAvatars from "../Group_Avatars/GroupAvatars";
 
 
 const style = {

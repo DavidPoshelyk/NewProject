@@ -4,7 +4,7 @@ import ProfileReducer from "./Profile-reducer";
 import SettingsReducer from "./Settings-reducer";
 import DialogsReducer from "./Dialogs-reducer";
 import  UsersReducer  from "./Users-reducer";
-import AuthReducer from "./auth-reducer";
+import AuthReducer from "./Auth-reducer";
 import thunkMiddleware from "redux-thunk";
 import { reducer as reduxFormReducer } from 'redux-form'
 

@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {authDataThunk, authLoginOutThunk} from "../../Redux/auth-reducer";
+import {authDataThunk, authLoginOutThunk} from "../../Redux/Auth-reducer";
 import ButtonAppBar from "./App Bar";
 
 

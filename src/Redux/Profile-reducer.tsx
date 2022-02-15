@@ -1,5 +1,5 @@
 import React from 'react';
-import {ProfileAPI} from "../api/ProfileAPI";
+import {ProfileAPI} from "./api/ProfileAPI";
 const DATA_PROFILE = 'DATA-PROFILE'
 const IS_FETCHING = 'IS-FETCHING'
 const SET_STATUS = 'SET-STATUS'

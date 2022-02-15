@@ -1,5 +1,5 @@
 import axios from "axios";
-import {isSubscribers} from "../Redux/Users-reducer";
+import {isSubscribers} from "../Users-reducer";
 
 
 
