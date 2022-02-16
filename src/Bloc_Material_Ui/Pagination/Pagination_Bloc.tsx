@@ -11,7 +11,7 @@ export default function BasicPagination(props:any) {
 
     return (
         <Stack spacing={2}>
-            <Pagination count={props.totalCount/10|0} onChange={handleChange} page={props.page}/>
+            <Pagination count={Math.ceil(props.totalCount/10)} onChange={handleChange} page={props.page}/>
             {/*<Pagination count={10} color="primary" />*/}
             {/*<Pagination count={10} color="secondary" />*/}
             {/*<Pagination count={10} disabled />*/}

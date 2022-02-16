@@ -13,7 +13,7 @@ import GroupAvatars from "../Group_Avatars/GroupAvatars";
 
 
 const style = {
-    borderRadius:'8px 8px 8px 8px',
+    borderRadius: '8px 8px 8px 8px',
     width: '100%',
     maxWidth: 360,
     bgcolor: 'background.paper',
@@ -23,27 +23,30 @@ const style = {
 export default function ListDividers() {
     return (
         <List sx={style} component="nav" aria-label="mailbox folders">
-            <ListItem button>
-                <AccountCircleIcon/>
-                <NavLink  className={s.navLink} activeClassName={s.navLink}  to='/profile'>
-                <ListItemText sx={{marginLeft:'10%'}} primary="Profile" />
-                </NavLink>
-            </ListItem>
-            <Divider />
-            <ListItem button divider>
-                <SupervisedUserCircleIcon/>
-                <NavLink  className={s.navLink} activeClassName={s.navLink} to='/friends'>
-                <ListItemText sx={{marginLeft:'10%'}} primary="Friends" />
-                </NavLink>
-            </ListItem>
+
+
+            <NavLink className={s.navLink} activeClassName={s.navLink} to='/profile'>
+                <ListItem button>
+                    <AccountCircleIcon/>
+                    <ListItemText sx={{marginLeft: '10%'}} primary="Profile"/>
+                </ListItem>
+            </NavLink>
+
+            <Divider/>
+            <NavLink className={s.navLink} activeClassName={s.navLink} to='/friends'>
+                <ListItem button divider>
+                    <SupervisedUserCircleIcon/>
+                    <ListItemText sx={{marginLeft: '10%'}} primary="Friends"/>
+                </ListItem>
+            </NavLink>
             <ListItem button>
                 <MessageIcon/>
-                <ListItemText sx={{marginLeft:'10%'}} primary="Messages" />
+                <ListItemText sx={{marginLeft: '10%'}} primary="Messages"/>
             </ListItem>
-            <Divider light />
+            <Divider light/>
             <ListItem button>
                 <SettingsIcon/>
-                <ListItemText sx={{marginLeft:'10%'}} primary="Settings" />
+                <ListItemText sx={{marginLeft: '10%'}} primary="Settings"/>
             </ListItem>
             <Divider/>
             <GroupAvatars/>
