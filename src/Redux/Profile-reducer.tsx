@@ -116,7 +116,8 @@ export const postPhotoProfile = (file: any) => {
         formData.append('image', file)
         ProfileAPI.postPhoto(formData)
            .catch(res=> {
-               console.warn(res)
+               console.warn(res);
+
            })
         dispatch(isFetching(false))
     }
