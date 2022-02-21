@@ -4,12 +4,14 @@ import  UsersReducer  from "./Users-reducer";
 import AuthReducer from "./Auth-reducer";
 import thunkMiddleware from "redux-thunk";
 import { reducer as reduxFormReducer } from 'redux-form'
+import AppReducer from "./App-reducer";
 
 
 const rootReducer = combineReducers({
     ProfileReducer,
     UsersReducer,
     AuthReducer,
+    AppReducer,
     form:reduxFormReducer
 })
 

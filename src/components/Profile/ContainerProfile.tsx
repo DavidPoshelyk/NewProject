@@ -12,6 +12,9 @@ class ContainerProfileAPI extends React.Component<any, any> {
         let userId = this.props.match.params.userId
         if (!userId) {
             userId = this.props.authId
+            if(!userId){
+                this.props.history.push('/login')
+            }
         }
         this.props.profilePage(userId)
         this.props.getStatusThunk(userId)

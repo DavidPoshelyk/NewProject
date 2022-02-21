@@ -32,15 +32,14 @@ export const authDataAC = (id:number|null,login:string|null,email:string|null, i
 {return{type:'AUTH-DATA', data:{id,login,email,isAuth}}as const}
 
 
-export const  authDataThunk = () => {
-    return (dispatch:Dispatch)=> {
-        AuthAPI.authData().then(response => {
+export const  authDataThunk = () => (dispatch:Dispatch)=> {
+        return AuthAPI.authData().then(response => {
             if(response.resultCode === 0){
                 let {email, id, login} = response.data
                 dispatch(authDataAC(id, login, email, true))
             }
         })
-    }
+
 }
 export const  authLoginThunk = (email:string, password:string, rememberMe:boolean) => {
     return (dispatch:any)=> {

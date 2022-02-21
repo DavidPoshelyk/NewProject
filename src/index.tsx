@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import store from "./Redux/Store";
-
 import {Provider} from "react-redux";
+import App from './App';
+
 
 
 let renderDom = (store?: any) => {
@@ -12,7 +12,7 @@ let renderDom = (store?: any) => {
     ReactDOM.render(
         <React.StrictMode>
             <Provider store={store}>
-            <App/>
+                <App/>
             </Provider>
         </React.StrictMode>,
         document.getElementById('root')
@@ -24,4 +24,4 @@ store.subscribe(() => {
 
     renderDom(store)
 })
-//dispatch={store.dispatch.bind(store)}
+// dispatch={store.dispatch.bind(store)}

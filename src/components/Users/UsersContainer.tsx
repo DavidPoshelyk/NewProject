@@ -14,7 +14,6 @@ import {AppRootStateType} from "../../Redux/Store";
 class UsersContainer extends React.Component<any, any> {
     componentDidMount() {
         this.props.getUserThunk()
-
     }
     paginationUsers = (page: number, isSubscriber?: boolean) => {
         this.props.paginationUsers(page, isSubscriber)

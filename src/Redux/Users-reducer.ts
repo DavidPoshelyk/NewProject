@@ -41,7 +41,7 @@ type UsersReducerType = {
 
  const UsersReducer = (state:UsersReducerType = initialState, action:actionType) => {
     switch (action.type) {
-        case "DATA-USERS": {return  {...state, user:[...action.data.items ]}}
+        case "DATA-USERS": {return  {...state, user:[...action.data.items], totalCount:action.data.totalCount}}
         case'FOLLOW' :{return  {...state, followProgress:[...state.followProgress].filter(f=> f !== action.id), user:state.user.map((m:userType)=> m.id === action.id? {...m, followed:true}: m ) } }
         case'UNFOLLOW' :{return {...state, followProgress:[...state.followProgress].filter(f=> f !== action.id),  user:state.user.map((m:userType)=> m.id === action.id? {...m, followed:false}: m ) }}
         case "PAGE-USER": {return {...state, page: action.page}}
