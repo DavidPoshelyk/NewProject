@@ -6,7 +6,7 @@ export interface LayoutProps  {
     children: React.ReactNode
 }
 
-export default function ContentContainer(props: LayoutProps) {
+function ContentContainer(props: LayoutProps) {
     return (
         <>
             <NavContainer/>
@@ -17,3 +17,4 @@ export default function ContentContainer(props: LayoutProps) {
         </>
     );
 }
+export default ContentContainer

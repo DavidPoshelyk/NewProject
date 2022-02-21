@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Redirect, Route} from 'react-router-dom';
 import LoginContainer from "./components/Login/Login_Container";
 import {HeaderContainer} from "./components/Header/HeaderContainer";
 import {ContainerProfile} from "./components/Profile/ContainerProfile";
@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import {appInitializedThunk} from "./Redux/App-reducer";
 
 import CircularProgress from '@mui/material/CircularProgress';
+import {withAuthRedirect} from "./components/hoc/withAuthHoc";
 
 
 
@@ -27,7 +28,7 @@ class App extends React.Component<any,any> {
                 <BrowserRouter>
                     <HeaderContainer/>
                     <div className='containerItems'>
-                        {/*<Redirect from="/" to="profile"/>*/}
+                        {/*<Redirect from="/" to="login"/>*/}
                         <Route path='/login' render={() => <LoginContainer/>}/>
                         <Route path='/profile' render={() => {
                             return (
@@ -54,4 +55,4 @@ const mapStateToProps = (state:any) => {
 
 }
 
-export default connect(mapStateToProps, {appInitializedThunk})(App);
+export default  connect(mapStateToProps, {appInitializedThunk})(App);

@@ -1,19 +1,22 @@
-import axios from "axios";
-
-
+import axios, { AxiosResponse } from 'axios'
 
 const instance = axios.create({
     withCredentials:true,
     baseURL:"https://social-network.samuraijs.com/api/1.0/",
-    // headers:{
-    //     "API-KEY":"efb35fa1-6088-492e-972d-bc847ab17ea5"
-    //
-    // },
+
 
 })
 export  const  AuthAPI = {
-    authData:()=>{return instance.get(`auth/me`).then((response) => response.data)},
-    authPost:(email:string, password:string, rememberMe:boolean)=>{return instance.post(`auth/login`,{email, password, rememberMe}).then((response) => response.data)},
-    authDelete:()=>{return instance.delete(`auth/login`).then((response) => response.data)},
+    authData:()=>{return instance.get<ResponseType<{id:number, email:string, login:string}>>(`auth/me`)},
+    authPost:(email:string, password:string, rememberMe:boolean)=>{return instance.post<{userId:number},AxiosResponse<ResponseType<{userId:number}>>>(`auth/login`,{email, password, rememberMe})},
+    authDelete:()=>{return instance.delete<authDeleteType>(`auth/login`)},
 
 }
+
+export interface ResponseType<D = {}> {
+    resultCode: number
+    messages: Array<string>
+    fieldsErrors: Array<string>
+    data: D
+}
+type authDeleteType = Omit<ResponseType, 'fieldsErrors'>

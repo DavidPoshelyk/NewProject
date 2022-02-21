@@ -3,7 +3,7 @@
 }
 .photoBloc{
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     flex-direction: column;
     align-items: center;
     border: 1px solid rgba(187, 184, 184, 0.37);
@@ -29,7 +29,7 @@
 .name{
     padding-left: 20px;
     height: 60px;
-    font-size: 12px;
+    font-size: 10px;
     font-family: -apple-system,BlinkMacSystemFont,'Roboto','Helvetica Neue',Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
 }
 .info{
@@ -38,9 +38,8 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
-
 }
+
 .photoRefactor{
     display: flex;
     flex-direction: column;
@@ -51,5 +50,18 @@
 .photoRefactor input{
     margin: 10px;
     width: 180px;
+}
+.blocInfoUser{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.blocInfoUser span{
+    margin: 5px;
+    font-family: -apple-system,BlinkMacSystemFont,'Roboto','Helvetica Neue',Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
+}
 
+.span{
+    font-size: 15px;
+    font-family: -apple-system,BlinkMacSystemFont,'Roboto','Helvetica Neue',Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif,arial,Tahoma,verdana;
 }

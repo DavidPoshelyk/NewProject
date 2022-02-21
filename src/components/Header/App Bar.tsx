@@ -9,6 +9,7 @@ import Avatar from '@mui/material/Avatar';
 import {NavLink} from 'react-router-dom';
 
 export default function ButtonAppBar(props: any) {
+    console.log(props)
     return (
         <Box sx={{flexGrow: 1, minWidth: "360px",}}>
             <AppBar position="static">
@@ -21,9 +22,8 @@ export default function ButtonAppBar(props: any) {
                         sx={{mr: 2}}
                     >
                         <Avatar
-                            alt="Remy Sharp"
-                            src="/static/images/avatar/1.jpg"
-                            // sx={{ width: 56, height: 56 }}
+                            src={props.data.myPhotos}
+                            sx={{ width: 40, height: 40 }}
                         />
 
                     </IconButton>

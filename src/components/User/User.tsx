@@ -4,7 +4,7 @@ import {Button} from "@mui/material";
 import Divider from "@mui/material/Divider";
 
 const User = (props: any) => {
-    console.log(props)
+
     return (
         <>
             <div className={s.user}>

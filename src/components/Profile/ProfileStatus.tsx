@@ -1,8 +1,8 @@
 import React, {ChangeEvent} from "react";
+import  s from './Profile_Bloc.module.css'
 
 
 export class ProfileStatus extends React.Component<any, any> {
-
 
     state = {
         editMode: false,
@@ -46,7 +46,7 @@ export class ProfileStatus extends React.Component<any, any> {
                 </div>}
                 {!this.state.editMode &&
                 <div onDoubleClick={this.activateEditMode}>
-                    <span>{this.props.status || '-------'}</span>
+                    <span className={s.span}>{this.props.status || '-------'}</span>
                 </div>}
             </div>
 

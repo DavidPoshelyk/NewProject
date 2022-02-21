@@ -117,7 +117,6 @@ export const postPhotoProfile = (file: any) => {
         ProfileAPI.postPhoto(formData)
            .catch(res=> {
                console.warn(res)
-
            })
         dispatch(isFetching(false))
     }

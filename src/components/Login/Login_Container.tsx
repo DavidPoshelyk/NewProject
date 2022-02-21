@@ -4,6 +4,7 @@ import LoginForm from './LoginForm';
 import {Redirect} from "react-router-dom";
 import {connect} from "react-redux";
 import {authLoginThunk} from "../../Redux/Auth-reducer";
+import {withAuthRedirect} from "../hoc/withAuthHoc";
 
 
 
@@ -14,8 +15,7 @@ const LoginContainer = (props:any) => {
     if(props.isAuth)  return <Redirect to={'/profile'}/>
     return (
         <div className={s.LoginContainer}>
-            <div className={s.form}>
-                <h1 className={s.family}>Log in</h1>
+            <div >
                 <LoginForm onSubmit={onSubmit}/>
             </div>
         </div>
@@ -28,6 +28,6 @@ const mapDispatchToProps = (state:any) => {
     }
 
 }
-export  default connect(mapDispatchToProps, {authLoginThunk})(LoginContainer)
+export default withAuthRedirect(connect(mapDispatchToProps, {authLoginThunk})(LoginContainer))
 
 
