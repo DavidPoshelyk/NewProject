@@ -12,7 +12,7 @@ type actionType = followACType|unfollowACType| dataUsersACType|pageUserACType|is
         large: null|string,
     },
     status: null|string,
-    followed: boolean
+    followed: boolean,
 }
 
 const initialState = {
