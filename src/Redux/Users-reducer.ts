@@ -9,7 +9,7 @@ type actionType = followACType|unfollowACType| dataUsersACType|pageUserACType|is
     id: string,
     photos: {
         small: null|string,
-        large: null|string
+        large: null|string,
     },
     status: null|string,
     followed: boolean
