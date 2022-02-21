@@ -2,11 +2,15 @@ import React from "react";
 import s from './Content_Container.module.css'
 import NavContainer from "../NavContainer/Nav_Container";
 
-export default function СontentContainer(props?:any) {
+export interface LayoutProps  {
+    children: React.ReactNode
+}
+
+export default function ContentContainer(props: LayoutProps) {
     return (
         <>
             <NavContainer/>
-            <div className={s.СontentContainer}>
+            <div className={s.contentContainer}>
                 {props.children}
             </div>
 

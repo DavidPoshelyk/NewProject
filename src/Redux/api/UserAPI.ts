@@ -1,5 +1,6 @@
 import axios from "axios";
-import {isSubscribers} from "../Users-reducer";
+
+
 
 
 
@@ -11,11 +12,11 @@ const instance = axios.create({
     }
 })
 export  const  UserAPI = {
-    MoreUsers:(page:number,friend?:boolean)=>{return instance.get(`users?page=${page}&count=10&friend=${friend}`).then((response) => response.data)},
-    GetUsers:()=>{return instance.get('users?page=1').then((response) =>  response.data)},
-    GetSubscribers:(isFriend:boolean)=>{return instance.get(`users?page=1&${isFriend&&`friend=${isFriend}`}`)},
-    UnfollowUsers:(id:string)=>{return instance.delete(`follow/${id}`)},
-    FollowUsers:(id:string)=>{return instance.post(`follow/${id}`)},
+    moreUsers: (page: number, friend?: boolean)=> instance.get(`users?page=${page}&count=10&friend=${friend}`),
+    getUsers: ()=> instance.get('users?page=1'),
+    getSubscribers: (isFriend: boolean)=> instance.get(`users?page=1&${isFriend&&`friend=${isFriend}`}`),
+    unfollowUsers: (id: string)=> instance.delete(`follow/${id}`),
+    followUsers: (id: string)=> instance.post(`follow/${id}`),
 
 
 }

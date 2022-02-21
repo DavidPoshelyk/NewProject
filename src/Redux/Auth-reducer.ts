@@ -1,5 +1,6 @@
 import { AuthAPI } from "./api/AuthAPI";
 import {reset, stopSubmit} from "redux-form";
+import {Dispatch} from "redux";
 
 
 const initialState = {
@@ -7,25 +8,32 @@ const initialState = {
     login:null,
     email:null,
     isAuth:false,
+}
+type AuthReducerType = {
+    id:null|number,
+    login:null|string,
+    email:null|string,
+    isAuth:boolean,
 
 }
 
-const AuthReducer = (state = initialState, action:authDataACType) => {
+const AuthReducer = (state:AuthReducerType = initialState, action:authDataACType) => {
 
 switch (action.type) {
     case "AUTH-DATA": {
-        console.log(action.data)
         return {...state, ...action.data }}
         default:return state
 }
 };
 
 type authDataACType = ReturnType<typeof authDataAC >
-export const authDataAC = (id:number|null,login:string|null,email:string|null, isAuth:boolean) => {return{type:'AUTH-DATA', data:{id,login,email,isAuth}}as const}
+
+export const authDataAC = (id:number|null,login:string|null,email:string|null, isAuth:boolean) =>
+{return{type:'AUTH-DATA', data:{id,login,email,isAuth}}as const}
 
 
 export const  authDataThunk = () => {
-    return (dispatch:any)=> {
+    return (dispatch:Dispatch)=> {
         AuthAPI.authData().then(response => {
             if(response.resultCode === 0){
                 let {email, id, login} = response.data
@@ -36,12 +44,11 @@ export const  authDataThunk = () => {
 }
 export const  authLoginThunk = (email:string, password:string, rememberMe:boolean) => {
     return (dispatch:any)=> {
-
         AuthAPI.authPost(email, password, rememberMe).then(response => {
             console.log(response)
             if(response.resultCode === 0){
                 dispatch(authDataThunk())
-                dispatch( reset('login'))
+                dispatch(reset('login'))
             } else {
                 let error = response.messages.length > 0 ? response.messages[0]  : "Some error"
                 let action = stopSubmit('login', {_error:error})
@@ -52,7 +59,7 @@ export const  authLoginThunk = (email:string, password:string, rememberMe:boolea
     }
 }
 export const  authLoginOutThunk = () => {
-    return (dispatch:any)=> {
+    return (dispatch:Dispatch)=> {
         AuthAPI.authDelete().then(response => {
             if(response.resultCode === 0){
                 // dispatch(authDataAC(0, '', ''))

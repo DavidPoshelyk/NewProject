@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter, Redirect, Route} from 'react-router-dom';
-import СontentContainer from './components/ContentContainer/Content_Container';
 import LoginContainer from "./components/Login/Login_Container";
 import {HeaderContainer} from "./components/Header/HeaderContainer";
 import {ContainerProfile} from "./components/Profile/ContainerProfile";
 import UsersContainer from './components/Users/UsersContainer';
+import ContentContainer from './components/ContentContainer/Content_Container';
+
 
 
 function App() {
@@ -18,14 +19,14 @@ function App() {
                     <Route path='/login' render={() => <LoginContainer/>}/>
                     <Route path='/profile' render={() => {
                         return (
-                            <СontentContainer>
+                            <ContentContainer>
                                 <ContainerProfile/>
-                            </СontentContainer>)
+                            </ContentContainer>)
                     }}/>
                     <Route path='/friends' render={() => {
-                        return (<СontentContainer>
+                        return (<ContentContainer>
                             <UsersContainer/>
-                        </СontentContainer>)
+                        </ContentContainer>)
                     }}/>
                 </div>
             </BrowserRouter>

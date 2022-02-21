@@ -9,7 +9,7 @@
     border: 1px solid rgba(187, 184, 184, 0.37);
     border-radius: 8px;
     background-color: #fff;
-    min-width: 200px;
+    /*min-width: 250px;*/
     margin-right: 10px;
 
 }
@@ -42,5 +42,14 @@
 
 }
 .photoRefactor{
+    display: flex;
+    flex-direction: column;
     margin-bottom: 10px;
+    align-items: center;
+
+}
+.photoRefactor input{
+    margin: 10px;
+    width: 180px;
+
 }

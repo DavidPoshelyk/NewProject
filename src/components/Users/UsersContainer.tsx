@@ -9,11 +9,12 @@ import React from "react";
 import {withAuthRedirect} from "../hoc/withAuthHoc";
 import {compose} from "redux";
 import UsersBloc from "./Users_Bloc";
+import {AppRootStateType} from "../../Redux/Store";
 
 class UsersContainer extends React.Component<any, any> {
     componentDidMount() {
         this.props.getUserThunk()
-        console.log(this.props)
+
     }
     paginationUsers = (page: number, isSubscriber?: boolean) => {
         this.props.paginationUsers(page, isSubscriber)
@@ -33,7 +34,7 @@ class UsersContainer extends React.Component<any, any> {
     }
 }
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: AppRootStateType) => {
     return {
         data: state.UsersReducer,
         isSubscribers: state.UsersReducer.isSubscribers,

@@ -11,13 +11,8 @@ const instance = axios.create({
 })
 
 export  const  ProfileAPI = {
-    profilePage:(userId:number)=>{return instance.get(`profile/${userId}`)},
-    getStatus:(userId:string)=>{return instance.get(`profile/status/${userId}`)},
-    updateStatus:(status:string)=>instance.put(`profile/status`, {status}),
-    postPhoto:(file:any)=>{
-        // console.log(file[0])
-        const formData = new FormData()
-        formData.append('image', file)
-        console.log(formData)
-        return instance.put('profile/photo', formData)}
+    profilePage:(userId:number)=> instance.get(`profile/${userId}`),
+    getStatus:(userId:string)=> instance.get(`profile/status/${userId}`),
+    updateStatus:(status:string)=> instance.put(`profile/status`, {status}),
+    postPhoto:(formData:any)=>instance.put('profile/photo', formData)
 }
