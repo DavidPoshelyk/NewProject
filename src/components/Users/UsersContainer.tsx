@@ -10,6 +10,7 @@ import {withAuthRedirect} from "../hoc/withAuthHoc";
 import {compose} from "redux";
 import UsersBloc from "./Users_Bloc";
 import {AppRootStateType} from "../../Redux/Store";
+import {getIsSubscribersSelector,getPageUserSelector,  getUsersSelector } from "./Users-reselect";
 
 class UsersContainer extends React.Component<any, any> {
     componentDidMount() {
@@ -35,9 +36,9 @@ class UsersContainer extends React.Component<any, any> {
 
 const mapStateToProps = (state: AppRootStateType) => {
     return {
-        data: state.UsersReducer,
-        isSubscribers: state.UsersReducer.isSubscribers,
-        page: state.UsersReducer.page
+        data: getUsersSelector(state),
+        isSubscribers: getIsSubscribersSelector(state),
+        page: getPageUserSelector(state)
     }
 }
 

@@ -32,7 +32,7 @@ const initialState = {
     followProgress: [],
     isSubscribers: false
 }
-type UsersReducerType = {
+ export type UsersReducerType = {
     user: Array<any>,
     totalCount: null | number,
     page: number,
