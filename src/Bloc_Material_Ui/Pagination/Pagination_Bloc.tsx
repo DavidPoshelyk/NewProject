@@ -3,7 +3,6 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
 export default function BasicPagination(props:any) {
-    console.log(props)
 
     const handleChange = (event:any, value:any) => {
         props.paginationUsers(value)

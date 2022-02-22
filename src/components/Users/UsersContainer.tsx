@@ -36,9 +36,9 @@ class UsersContainer extends React.Component<any, any> {
 
 const mapStateToProps = (state: AppRootStateType) => {
     return {
-        data: getUsersSelector(state),
-        isSubscribers: getIsSubscribersSelector(state),
-        page: getPageUserSelector(state)
+        data: state.UsersReducer,
+        isSubscribers: state.UsersReducer.isSubscribers,
+        page: state.UsersReducer.page
     }
 }
 

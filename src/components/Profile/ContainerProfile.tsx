@@ -37,13 +37,13 @@ const mapStateToProps = (state: AppRootStateType) => {
     }
 }
 
-let AuthRedirectComponent = withAuthRedirect(ContainerProfileAPI)
+let AuthRedirectComponent = withAuthRedirect(withRouter(ContainerProfileAPI))
 
 
-let ContainerProfileAPIWithRouter = withRouter(AuthRedirectComponent)
+
 export const ContainerProfile = connect(mapStateToProps, {
     profilePage,
     updateStatusThunk,
     getStatusThunk,
     postPhotoProfile,
-})(ContainerProfileAPIWithRouter)
+})(AuthRedirectComponent)

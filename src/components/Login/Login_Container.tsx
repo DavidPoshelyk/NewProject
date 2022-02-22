@@ -28,6 +28,6 @@ const mapDispatchToProps = (state:any) => {
     }
 
 }
-export default withAuthRedirect(connect(mapDispatchToProps, {authLoginThunk})(LoginContainer))
+export default React.memo(connect(mapDispatchToProps, {authLoginThunk})(LoginContainer))
 
 

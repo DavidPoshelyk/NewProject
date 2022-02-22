@@ -9,7 +9,6 @@ import Avatar from '@mui/material/Avatar';
 import {NavLink} from 'react-router-dom';
 
 export default function ButtonAppBar(props: any) {
-    console.log(props)
     return (
         <Box sx={{flexGrow: 1, minWidth: "360px",}}>
             <AppBar position="static">

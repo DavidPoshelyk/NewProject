@@ -5,7 +5,6 @@ import Divider from "@mui/material/Divider";
 import {ProfileStatus} from "./ProfileStatus";
 
 const ProfileBloc = (props: any) => {
-    console.log(props)
     const [onfile, setOnFile] = useState<boolean>(false)
     const [filePhoto, setFilePhoto] = useState<any>()
     const [isBlocInfoUser,setBlocInfoUser]= useState<boolean>(false)

@@ -81,13 +81,13 @@ export const authLoginOutThunk = () => {
     }
 }
 
-export const getMyPhotoThunk = (userId: number) => {
-    return (dispatch: Dispatch) => ProfileAPI.profilePage(userId).then(res => {
-        dispatch(setMyPhotoAC(res.data.photos.large))
-    }).catch(rej => {
-        console.warn(rej)
-    })
-}
+// export const getMyPhotoThunk = (userId: number) => {
+//     return (dispatch: Dispatch) => ProfileAPI.profilePage(userId).then(res => {
+//         dispatch(setMyPhotoAC(res.data.photos.large))
+//     }).catch(rej => {
+//         console.warn(rej)
+//     })
+// }
 
 
 export default AuthReducer;
